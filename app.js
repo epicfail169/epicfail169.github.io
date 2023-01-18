@@ -1,16 +1,3 @@
-async function getStockReport() {
-    const response = await fetch('https://online.moysklad.ru/api/remap/1.2/report/stock/all?filter=productFolder=https://online.moysklad.ru/api/remap/1.2/entity/productfolder/131fa19d-7f9a-11ed-0a80-011b003d5b83', {
-        headers: {
-            'Content-Type': 'application/json',
-            'Authorization': 'Bearer 8122b41a6b1e8d1cc4c6d9f90e8d61ae3eb89c38'
-        }
-    });
-    const data = await response.json();
-    console.log(data);
-}
-
-getStockReport();
-
 let tg = window.Telegram.WebApp;
 
 tg.expand();
