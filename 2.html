@@ -63,7 +63,6 @@
     function updateIncart(index, value) {
         items[index].incart = Number(value);
         filteredItems = items.filter(item => item.incart > 0);
-        console.log(filteredItems)
         calculateTotalCost();
     }
 
@@ -89,7 +88,7 @@
 
     Telegram.WebApp.onEvent("mainButtonClicked", function () {
         filteredItems = items.filter(item => item.incart > 0);
-        tg.sendData('12313');
+        tg.sendData(items);
     });
 </script>
 </body>
