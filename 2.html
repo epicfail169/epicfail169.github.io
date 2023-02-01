@@ -43,7 +43,7 @@
         {name: "StarLine Экзотические Фрукты", quantity: 3, price: 350, incart: 0},
         {name: "StarLine Черничный Чизкейк", quantity: 12, price: 350, incart: 0},
     ];
-
+    filteredItems = items.filter(item => item.incart > 0);
     let totalCost = document.getElementById("totalCost");
 
     function calculateTotalCost() {
