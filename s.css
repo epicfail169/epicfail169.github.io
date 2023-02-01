@@ -1,0 +1,117 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    color: var(--tg-theme-text-color);
+    background: var(--tg-theme-bg-color);
+}
+
+input[type="number"] {
+    -webkit-appearance: textfield;
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+}
+
+.number-input {
+    border: 2px solid #ddd;
+    display: inline-flex;
+}
+
+.number-input,
+.number-input * {
+    box-sizing: border-box;
+}
+
+.number-input button {
+    outline: none;
+    -webkit-appearance: none;
+    background-color: transparent;
+    border: none;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+    margin: 0;
+    position: relative;
+}
+
+.number-input button:before,
+.number-input button:after {
+    display: inline-block;
+    position: absolute;
+    content: '';
+    width: 1rem;
+    height: 2px;
+    background-color: #212121;
+    transform: translate(-50%, -50%);
+}
+
+.number-input button.plus:after {
+    transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.number-input input[type=number] {
+    font-family: sans-serif;
+    max-width: 2rem;
+    padding: .5rem 0;
+    border: solid #ddd;
+    border-width: 0;
+    font-size: 1rem;
+    height: 2rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.container {
+    max-width: 390px;
+}
+
+.inner {
+    /*display: grid;*/
+    /*grid-template-columns: 1fr 1fr;*/
+    /*grid-template-rows: 200px 200px 200px;*/
+}
+
+.img {
+    width: 130px;
+}
+
+.item {
+    text-align: center;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border: none;
+    background: rgb(248, 168, 24);
+    border-radius: 10px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+
+    transition: background .2s linear;
+}
+
+.btn:hover {
+    background: lightgreen;
+}
+
+.usercard {
+    text-align: center;
+}
+
+/*
+var(--tg-theme-bg-color)
+var(--tg-theme-text-color)
+var(--tg-theme-hint-color)
+var(--tg-theme-link-color)
+var(--tg-theme-button-color)
+var(--tg-theme-button-text-color)
+*/
