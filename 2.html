@@ -88,7 +88,7 @@
 
     Telegram.WebApp.onEvent("mainButtonClicked", function () {
         filteredItems = items.filter(item => item.incart > 0);
-        tg.sendData(items);
+        tg.sendData(JSON.stringify(filteredItems));
     });
 </script>
 </body>
