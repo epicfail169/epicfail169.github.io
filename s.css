@@ -91,24 +91,34 @@ table {
     border: 0;
     border-spacing: 0;
 }
+
 thead {
     position: sticky;
     top: 0;
     background-color: var(--tg-theme-bg-color);
     z-index: 5;
 }
+
 th {
     text-align: left;
     padding: 1rem 0;
+    font-size: 1.5rem;
 }
+
 td {
     padding: 0;
 }
+
+tbody tr:nth-child(odd) {
+    background-color: hsla(0, 0%, 50%, 0.1);
+}
+
 tr td:nth-child(2),
 tr td:nth-child(3) {
     text-align: right;
     padding: 0 .5rem;
 }
+
 tr td:nth-child(4) {
     text-align: right;
 }
@@ -123,6 +133,7 @@ fieldset label {
     display: block;
     width: 100%;
 }
+
 fieldset input,
 fieldset select {
     display: block;
@@ -131,6 +142,7 @@ fieldset select {
     padding: 0 .75rem;
     font-size: 1.5rem;
 }
+
 .container {
     padding: .5rem;
     max-width: 32rem;
