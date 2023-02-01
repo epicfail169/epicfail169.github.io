@@ -128,6 +128,9 @@ input[type=number]::-webkit-outer-spin-button {
     align-items: center;
     grid-gap: .5rem;
 }
+table {
+    width: 100%;
+}
 thead {
     position: sticky;
     top: 0;
@@ -151,7 +154,10 @@ fieldset {
     margin: 1rem 0;
 }
 
-fieldset label,
+fieldset label {
+    display: block;
+    width: 100%;
+}
 fieldset input,
 fieldset select {
     display: block;
