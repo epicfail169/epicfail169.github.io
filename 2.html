@@ -33,7 +33,7 @@
     tg.MainButton.textColor = "#FFFFFF";
     tg.MainButton.color = "#2cab37";
     tg.MainButton.setText("Оформить заказ");
-    tg.MainButton.show();
+
 
     let items = [
         {name: "StarLine Экзотические Фрукты", quantity: 3, price: 350, incart: 0},
@@ -53,6 +53,11 @@
             cost += item.incart * item.price;
         }
         totalCost.innerHTML = `Total Cost: ${cost}`;
+        if (cost > 0) {
+            tg.MainButton.show();
+        } else {
+            tg.MainButton.hide();
+        }
     }
 
     function updateIncart(index, value) {
