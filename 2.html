@@ -9,8 +9,6 @@
 </head>
 
 <body>
-
-
 <table>
     <thead>
     <tr>
@@ -23,9 +21,27 @@
     <tbody id="itemList">
     </tbody>
 </table>
-
+<fieldset>
+    <label>Тайский номер телефона</label>
+    <input type="text" placeholder="+66 ...">
+</fieldset>
+<fieldset>
+    <label>Доставка</label>
+    <select>
+        <option>Rawai</option>
+        <option>Chalong</option>
+        <option>Kata/Karon</option>
+        <option>Patong/Kathu/Phuket Town</option>
+        <option>Kamala/Surin/Bangtao</option>
+        <option>Panwa</option>
+        <option>Mai Khao</option>
+    </select>
+</fieldset>
+<fieldset>
+    <label>Укажите точку доставки на Google Maps</label>
+    <input type="text" placeholder="https://goo.gl/maps/...">
+</fieldset>
 <p id="totalCost">Total Cost: 0</p>
-<div class="usercard" id="usercard"></div>
 <script>
     let tg = window.Telegram.WebApp;
     let filteredItems = []
@@ -34,15 +50,2328 @@
     tg.MainButton.color = "#2cab37";
     tg.MainButton.setText("Оформить заказ");
 
-
     let items = [
-        {name: "StarLine Экзотические Фрукты", quantity: 3, price: 350, incart: 0},
-        {name: "StarLine Черничный Чизкейк", quantity: 12, price: 350, incart: 0},
-        {name: "StarLine Экзотические Фрукты", quantity: 3, price: 350, incart: 0},
-        {name: "StarLine Черничный Чизкейк", quantity: 12, price: 350, incart: 0},
-        {name: "StarLine Экзотические Фрукты", quantity: 3, price: 350, incart: 0},
-        {name: "StarLine Черничный Чизкейк", quantity: 12, price: 350, incart: 0},
-    ];
+    {
+        "meta": {
+            "href": "https://online.moysklad.ru/api/remap/1.2/entity/product/8783a4a2-9588-11ed-0a80-012d0037a794?expand=supplier",
+            "metadataHref": "https://online.moysklad.ru/api/remap/1.2/entity/product/metadata",
+            "type": "product",
+            "mediaType": "application/json",
+            "uuidHref": "https://online.moysklad.ru/app/#good/edit?id=87839a80-9588-11ed-0a80-012d0037a792"
+        },
+        "stock": 2.0,
+        "inTransit": 0.0,
+        "reserve": 0.0,
+        "quantity": 2.0,
+        "name": "Black Burn Elderberry Shock",
+        "code": "00072",
+        "price": 12200.0,
+        "salePrice": 45000.0,
+        "uom": {
+            "meta": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/entity/uom/19f1edc0-fc42-4001-94cb-c9ec9c62ec10",
+                "metadataHref": "https://online.moysklad.ru/api/remap/1.2/entity/uom/metadata",
+                "type": "uom",
+                "mediaType": "application/json"
+            },
+            "name": "шт"
+        },
+        "folder": {
+            "meta": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/entity/productfolder/8b8557e4-9586-11ed-0a80-08e10036b098",
+                "metadataHref": "https://online.moysklad.ru/api/remap/1.2/entity/productfolder/metadata",
+                "type": "productfolder",
+                "mediaType": "application/json",
+                "uuidHref": "https://online.moysklad.ru/app/#good/edit?id=8b8557e4-9586-11ed-0a80-08e10036b098"
+            },
+            "name": "Black Burn 30гр",
+            "pathName": "Табак"
+        },
+        "image": {
+            "meta": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/download/2ffe34b9-e939-4ac5-bfa2-281ef4aa55b7",
+                "mediaType": "application/octet-stream"
+            },
+            "title": "5a0b24dfe5b5706af3069b40dad42ebc",
+            "filename": "5a0b24dfe5b5706af3069b40dad42ebc.jpg",
+            "size": 63538,
+            "updated": "2023-01-16 13:28:27.560",
+            "miniature": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/download/2ffe34b9-e939-4ac5-bfa2-281ef4aa55b7?miniature=true",
+                "mediaType": "application/octet-stream",
+                "downloadHref": "https://miniature-prod.moysklad.ru/miniature/e154a3ce-7f99-11ed-0a80-07f300016d79/documentminiature/d29e631f-23b2-4450-838c-8fb7be0ad8a3"
+            },
+            "tiny": {
+                "href": "https://tinyimage-prod.moysklad.ru/static/tinyimage/e154a3ce-7f99-11ed-0a80-07f300016d79/tinyimage/9e431e9c-4206-42bf-84de-568803a109cb/t.png",
+                "mediaType": "application/octet-stream"
+            }
+        },
+        "externalCode": "vMkkGSQgh9DwT18hO-G1U3",
+        "stockDays": 14.21
+    },
+    {
+        "meta": {
+            "href": "https://online.moysklad.ru/api/remap/1.2/entity/product/6d916e4c-9587-11ed-0a80-012d00375f79?expand=supplier",
+            "metadataHref": "https://online.moysklad.ru/api/remap/1.2/entity/product/metadata",
+            "type": "product",
+            "mediaType": "application/json",
+            "uuidHref": "https://online.moysklad.ru/app/#good/edit?id=6d91657a-9587-11ed-0a80-012d00375f77"
+        },
+        "stock": 3.0,
+        "inTransit": 0.0,
+        "reserve": 0.0,
+        "quantity": 3.0,
+        "name": "Black Burn Juicy Smoothie",
+        "code": "00069",
+        "price": 12200.0,
+        "salePrice": 45000.0,
+        "uom": {
+            "meta": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/entity/uom/19f1edc0-fc42-4001-94cb-c9ec9c62ec10",
+                "metadataHref": "https://online.moysklad.ru/api/remap/1.2/entity/uom/metadata",
+                "type": "uom",
+                "mediaType": "application/json"
+            },
+            "name": "шт"
+        },
+        "folder": {
+            "meta": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/entity/productfolder/8b8557e4-9586-11ed-0a80-08e10036b098",
+                "metadataHref": "https://online.moysklad.ru/api/remap/1.2/entity/productfolder/metadata",
+                "type": "productfolder",
+                "mediaType": "application/json",
+                "uuidHref": "https://online.moysklad.ru/app/#good/edit?id=8b8557e4-9586-11ed-0a80-08e10036b098"
+            },
+            "name": "Black Burn 30гр",
+            "pathName": "Табак"
+        },
+        "image": {
+            "meta": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/download/a55a70cd-9c4c-4131-8622-616e1e150c11",
+                "mediaType": "application/octet-stream"
+            },
+            "title": "c9b2d64402f3c80cb342f05b25a2b84c329e48d6",
+            "filename": "c9b2d64402f3c80cb342f05b25a2b84c329e48d6.png",
+            "size": 6436223,
+            "updated": "2023-01-16 13:20:15.049",
+            "miniature": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/download/a55a70cd-9c4c-4131-8622-616e1e150c11?miniature=true",
+                "mediaType": "application/octet-stream",
+                "downloadHref": "https://miniature-prod.moysklad.ru/miniature/e154a3ce-7f99-11ed-0a80-07f300016d79/documentminiature/e921bb7b-7eeb-46e7-8ecc-8418be75ce22"
+            },
+            "tiny": {
+                "href": "https://tinyimage-prod.moysklad.ru/static/tinyimage/e154a3ce-7f99-11ed-0a80-07f300016d79/tinyimage/39d9a2e2-f28c-4f99-b425-9eefc70fe08a/t.png",
+                "mediaType": "application/octet-stream"
+            }
+        },
+        "externalCode": "tPfkmKnYhzesQa1KzPr-i3",
+        "stockDays": 14.21
+    },
+    {
+        "meta": {
+            "href": "https://online.moysklad.ru/api/remap/1.2/entity/product/eae9d647-9587-11ed-0a80-012d00377f0d?expand=supplier",
+            "metadataHref": "https://online.moysklad.ru/api/remap/1.2/entity/product/metadata",
+            "type": "product",
+            "mediaType": "application/json",
+            "uuidHref": "https://online.moysklad.ru/app/#good/edit?id=eae9ce07-9587-11ed-0a80-012d00377f0b"
+        },
+        "stock": 1.0,
+        "inTransit": 0.0,
+        "reserve": 0.0,
+        "quantity": 1.0,
+        "name": "Black Burn Mirinda",
+        "code": "00070",
+        "price": 12200.0,
+        "salePrice": 45000.0,
+        "uom": {
+            "meta": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/entity/uom/19f1edc0-fc42-4001-94cb-c9ec9c62ec10",
+                "metadataHref": "https://online.moysklad.ru/api/remap/1.2/entity/uom/metadata",
+                "type": "uom",
+                "mediaType": "application/json"
+            },
+            "name": "шт"
+        },
+        "folder": {
+            "meta": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/entity/productfolder/8b8557e4-9586-11ed-0a80-08e10036b098",
+                "metadataHref": "https://online.moysklad.ru/api/remap/1.2/entity/productfolder/metadata",
+                "type": "productfolder",
+                "mediaType": "application/json",
+                "uuidHref": "https://online.moysklad.ru/app/#good/edit?id=8b8557e4-9586-11ed-0a80-08e10036b098"
+            },
+            "name": "Black Burn 30гр",
+            "pathName": "Табак"
+        },
+        "image": {
+            "meta": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/download/a99d48fc-d407-4323-90a9-df1b5805298f",
+                "mediaType": "application/octet-stream"
+            },
+            "title": "8fac2a40defd24e0d180f986619e611318ebbb11",
+            "filename": "8fac2a40defd24e0d180f986619e611318ebbb11.jpeg",
+            "size": 419665,
+            "updated": "2023-01-16 13:24:03.294",
+            "miniature": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/download/a99d48fc-d407-4323-90a9-df1b5805298f?miniature=true",
+                "mediaType": "application/octet-stream",
+                "downloadHref": "https://miniature-prod.moysklad.ru/miniature/e154a3ce-7f99-11ed-0a80-07f300016d79/documentminiature/e755aaf0-2b0c-4e6b-acbc-35c1fbdb7afb"
+            },
+            "tiny": {
+                "href": "https://tinyimage-prod.moysklad.ru/static/tinyimage/e154a3ce-7f99-11ed-0a80-07f300016d79/tinyimage/5578175a-0c0d-4d48-813c-281dd2f2966d/t.png",
+                "mediaType": "application/octet-stream"
+            }
+        },
+        "externalCode": "nVBBi17Riidy9rNoK0IGl3",
+        "stockDays": 14.21
+    },
+    {
+        "meta": {
+            "href": "https://online.moysklad.ru/api/remap/1.2/entity/product/5746ff4e-9588-11ed-0a80-11090019d6d4?expand=supplier",
+            "metadataHref": "https://online.moysklad.ru/api/remap/1.2/entity/product/metadata",
+            "type": "product",
+            "mediaType": "application/json",
+            "uuidHref": "https://online.moysklad.ru/app/#good/edit?id=5746f744-9588-11ed-0a80-11090019d6d2"
+        },
+        "stock": 2.0,
+        "inTransit": 0.0,
+        "reserve": 0.0,
+        "quantity": 2.0,
+        "name": "Black Burn Over dose Hard level",
+        "code": "00071",
+        "price": 12200.0,
+        "salePrice": 45000.0,
+        "uom": {
+            "meta": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/entity/uom/19f1edc0-fc42-4001-94cb-c9ec9c62ec10",
+                "metadataHref": "https://online.moysklad.ru/api/remap/1.2/entity/uom/metadata",
+                "type": "uom",
+                "mediaType": "application/json"
+            },
+            "name": "шт"
+        },
+        "folder": {
+            "meta": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/entity/productfolder/8b8557e4-9586-11ed-0a80-08e10036b098",
+                "metadataHref": "https://online.moysklad.ru/api/remap/1.2/entity/productfolder/metadata",
+                "type": "productfolder",
+                "mediaType": "application/json",
+                "uuidHref": "https://online.moysklad.ru/app/#good/edit?id=8b8557e4-9586-11ed-0a80-08e10036b098"
+            },
+            "name": "Black Burn 30гр",
+            "pathName": "Табак"
+        },
+        "image": {
+            "meta": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/download/e0d97841-1541-46df-8a33-735908f8a36d",
+                "mediaType": "application/octet-stream"
+            },
+            "title": "black-burn-100-900x900",
+            "filename": "black-burn-100-900x900.png",
+            "size": 264393,
+            "updated": "2023-01-16 13:27:06.143",
+            "miniature": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/download/e0d97841-1541-46df-8a33-735908f8a36d?miniature=true",
+                "mediaType": "application/octet-stream",
+                "downloadHref": "https://miniature-prod.moysklad.ru/miniature/e154a3ce-7f99-11ed-0a80-07f300016d79/documentminiature/f67fae90-640b-42b1-aece-327d5f0afb82"
+            },
+            "tiny": {
+                "href": "https://tinyimage-prod.moysklad.ru/static/tinyimage/e154a3ce-7f99-11ed-0a80-07f300016d79/tinyimage/ef977840-89d7-4504-9b92-57f0345f931f/t.png",
+                "mediaType": "application/octet-stream"
+            }
+        },
+        "externalCode": "qr0Xf1ythzmicgwEAsKnp2",
+        "stockDays": 14.21
+    },
+    {
+        "meta": {
+            "href": "https://online.moysklad.ru/api/remap/1.2/entity/product/019f085d-7f9c-11ed-0a80-0e62003db64b?expand=supplier",
+            "metadataHref": "https://online.moysklad.ru/api/remap/1.2/entity/product/metadata",
+            "type": "product",
+            "mediaType": "application/json",
+            "uuidHref": "https://online.moysklad.ru/app/#good/edit?id=019eff5f-7f9c-11ed-0a80-0e62003db649"
+        },
+        "stock": 6.0,
+        "inTransit": 0.0,
+        "reserve": 0.0,
+        "quantity": 6.0,
+        "name": "Admiral Acbar Creal",
+        "code": "00003",
+        "price": 10400.0,
+        "salePrice": 40000.0,
+        "uom": {
+            "meta": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/entity/uom/19f1edc0-fc42-4001-94cb-c9ec9c62ec10",
+                "metadataHref": "https://online.moysklad.ru/api/remap/1.2/entity/uom/metadata",
+                "type": "uom",
+                "mediaType": "application/json"
+            },
+            "name": "шт"
+        },
+        "folder": {
+            "meta": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/entity/productfolder/564bb87b-7f9a-11ed-0a80-05a1003dcfbd",
+                "metadataHref": "https://online.moysklad.ru/api/remap/1.2/entity/productfolder/metadata",
+                "type": "productfolder",
+                "mediaType": "application/json",
+                "uuidHref": "https://online.moysklad.ru/app/#good/edit?id=564bb87b-7f9a-11ed-0a80-05a1003dcfbd"
+            },
+            "name": "Dark Side 30g",
+            "pathName": "Табак"
+        },
+        "image": {
+            "meta": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/download/9002acc8-89a5-4441-8cbb-b1889081652a",
+                "mediaType": "application/octet-stream"
+            },
+            "title": "admiral-acbar-darkside-tobacco",
+            "filename": "admiral-acbar-darkside-tobacco.jpg",
+            "size": 43462,
+            "updated": "2022-12-19 15:52:30.966",
+            "miniature": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/download/9002acc8-89a5-4441-8cbb-b1889081652a?miniature=true",
+                "mediaType": "application/octet-stream",
+                "downloadHref": "https://miniature-prod.moysklad.ru/miniature/e154a3ce-7f99-11ed-0a80-07f300016d79/documentminiature/71d163cd-7aa8-4427-b694-2fa91ed7929f"
+            },
+            "tiny": {
+                "href": "https://tinyimage-prod.moysklad.ru/static/tinyimage/e154a3ce-7f99-11ed-0a80-07f300016d79/tinyimage/aff23b04-6b89-4879-a4db-792fa0ceb868/t.png",
+                "mediaType": "application/octet-stream"
+            }
+        },
+        "externalCode": "3hUV4OGoj7djrGXk7lTCm3",
+        "stockDays": 41.88
+    },
+    {
+        "meta": {
+            "href": "https://online.moysklad.ru/api/remap/1.2/entity/product/d68f5197-7f9f-11ed-0a80-04b7003f8453?expand=supplier",
+            "metadataHref": "https://online.moysklad.ru/api/remap/1.2/entity/product/metadata",
+            "type": "product",
+            "mediaType": "application/json",
+            "uuidHref": "https://online.moysklad.ru/app/#good/edit?id=d68f4ade-7f9f-11ed-0a80-04b7003f8451"
+        },
+        "stock": 3.0,
+        "inTransit": 0.0,
+        "reserve": 0.0,
+        "quantity": 3.0,
+        "name": "Blackcurrant",
+        "code": "00013",
+        "price": 10400.0,
+        "salePrice": 40000.0,
+        "uom": {
+            "meta": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/entity/uom/19f1edc0-fc42-4001-94cb-c9ec9c62ec10",
+                "metadataHref": "https://online.moysklad.ru/api/remap/1.2/entity/uom/metadata",
+                "type": "uom",
+                "mediaType": "application/json"
+            },
+            "name": "шт"
+        },
+        "folder": {
+            "meta": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/entity/productfolder/564bb87b-7f9a-11ed-0a80-05a1003dcfbd",
+                "metadataHref": "https://online.moysklad.ru/api/remap/1.2/entity/productfolder/metadata",
+                "type": "productfolder",
+                "mediaType": "application/json",
+                "uuidHref": "https://online.moysklad.ru/app/#good/edit?id=564bb87b-7f9a-11ed-0a80-05a1003dcfbd"
+            },
+            "name": "Dark Side 30g",
+            "pathName": "Табак"
+        },
+        "image": {
+            "meta": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/download/17ba6ab0-ce60-4740-8b3e-fa0447f25d3e",
+                "mediaType": "application/octet-stream"
+            },
+            "title": "blackcurrant-darkside-tobacco",
+            "filename": "blackcurrant-darkside-tobacco.jpg",
+            "size": 60479,
+            "updated": "2022-12-19 16:19:35.668",
+            "miniature": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/download/17ba6ab0-ce60-4740-8b3e-fa0447f25d3e?miniature=true",
+                "mediaType": "application/octet-stream",
+                "downloadHref": "https://miniature-prod.moysklad.ru/miniature/e154a3ce-7f99-11ed-0a80-07f300016d79/documentminiature/607916c4-945c-405e-9146-fcdb3ae40524"
+            },
+            "tiny": {
+                "href": "https://tinyimage-prod.moysklad.ru/static/tinyimage/e154a3ce-7f99-11ed-0a80-07f300016d79/tinyimage/50da5b0f-af13-4c34-aba9-474149b5f11c/t.png",
+                "mediaType": "application/octet-stream"
+            }
+        },
+        "externalCode": "G1hNj8WAgG1ToXmRuwlez1",
+        "stockDays": 41.88
+    },
+    {
+        "meta": {
+            "href": "https://online.moysklad.ru/api/remap/1.2/entity/product/27e7a356-7f9d-11ed-0a80-03e9003f359a?expand=supplier",
+            "metadataHref": "https://online.moysklad.ru/api/remap/1.2/entity/product/metadata",
+            "type": "product",
+            "mediaType": "application/json",
+            "uuidHref": "https://online.moysklad.ru/app/#good/edit?id=27e79ce0-7f9d-11ed-0a80-03e9003f3598"
+        },
+        "stock": 5.0,
+        "inTransit": 0.0,
+        "reserve": 0.0,
+        "quantity": 5.0,
+        "name": "Breking Red",
+        "code": "00005",
+        "price": 10400.0,
+        "salePrice": 40000.0,
+        "uom": {
+            "meta": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/entity/uom/19f1edc0-fc42-4001-94cb-c9ec9c62ec10",
+                "metadataHref": "https://online.moysklad.ru/api/remap/1.2/entity/uom/metadata",
+                "type": "uom",
+                "mediaType": "application/json"
+            },
+            "name": "шт"
+        },
+        "folder": {
+            "meta": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/entity/productfolder/564bb87b-7f9a-11ed-0a80-05a1003dcfbd",
+                "metadataHref": "https://online.moysklad.ru/api/remap/1.2/entity/productfolder/metadata",
+                "type": "productfolder",
+                "mediaType": "application/json",
+                "uuidHref": "https://online.moysklad.ru/app/#good/edit?id=564bb87b-7f9a-11ed-0a80-05a1003dcfbd"
+            },
+            "name": "Dark Side 30g",
+            "pathName": "Табак"
+        },
+        "image": {
+            "meta": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/download/a532d051-4a05-46c3-b44f-c12ad333e2a3",
+                "mediaType": "application/octet-stream"
+            },
+            "title": "tabak-darkside-medium-breaking-red-vzryv-krasnogo-100-gramm",
+            "filename": "tabak-darkside-medium-breaking-red-vzryv-krasnogo-100-gramm.jpg",
+            "size": 498294,
+            "updated": "2022-12-19 16:00:41.381",
+            "miniature": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/download/a532d051-4a05-46c3-b44f-c12ad333e2a3?miniature=true",
+                "mediaType": "application/octet-stream",
+                "downloadHref": "https://miniature-prod.moysklad.ru/miniature/e154a3ce-7f99-11ed-0a80-07f300016d79/documentminiature/db7ac84e-87e2-4265-8a4a-9c94ffb52ae4"
+            },
+            "tiny": {
+                "href": "https://tinyimage-prod.moysklad.ru/static/tinyimage/e154a3ce-7f99-11ed-0a80-07f300016d79/tinyimage/56087950-a6a5-4713-97b0-d68fabd9a569/t.png",
+                "mediaType": "application/octet-stream"
+            }
+        },
+        "externalCode": "H5h7VcZNhUrDvcljPX9g22",
+        "stockDays": 41.88
+    },
+    {
+        "meta": {
+            "href": "https://online.moysklad.ru/api/remap/1.2/entity/product/96798b3b-7f9f-11ed-0a80-00ec003e1158?expand=supplier",
+            "metadataHref": "https://online.moysklad.ru/api/remap/1.2/entity/product/metadata",
+            "type": "product",
+            "mediaType": "application/json",
+            "uuidHref": "https://online.moysklad.ru/app/#good/edit?id=9679833a-7f9f-11ed-0a80-00ec003e1156"
+        },
+        "stock": 2.0,
+        "inTransit": 0.0,
+        "reserve": 0.0,
+        "quantity": 2.0,
+        "name": "Generis Raspberry",
+        "code": "00012",
+        "price": 10400.0,
+        "salePrice": 40000.0,
+        "uom": {
+            "meta": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/entity/uom/19f1edc0-fc42-4001-94cb-c9ec9c62ec10",
+                "metadataHref": "https://online.moysklad.ru/api/remap/1.2/entity/uom/metadata",
+                "type": "uom",
+                "mediaType": "application/json"
+            },
+            "name": "шт"
+        },
+        "folder": {
+            "meta": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/entity/productfolder/564bb87b-7f9a-11ed-0a80-05a1003dcfbd",
+                "metadataHref": "https://online.moysklad.ru/api/remap/1.2/entity/productfolder/metadata",
+                "type": "productfolder",
+                "mediaType": "application/json",
+                "uuidHref": "https://online.moysklad.ru/app/#good/edit?id=564bb87b-7f9a-11ed-0a80-05a1003dcfbd"
+            },
+            "name": "Dark Side 30g",
+            "pathName": "Табак"
+        },
+        "image": {
+            "meta": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/download/806a35ef-bb26-40e1-8ef6-502db4580ce8",
+                "mediaType": "application/octet-stream"
+            },
+            "title": "tabak_Dark_Side_Medium_-_Generis_Raspberry_malina",
+            "filename": "tabak_Dark_Side_Medium_-_Generis_Raspberry_malina.jpg",
+            "size": 99582,
+            "updated": "2022-12-19 16:18:06.392",
+            "miniature": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/download/806a35ef-bb26-40e1-8ef6-502db4580ce8?miniature=true",
+                "mediaType": "application/octet-stream",
+                "downloadHref": "https://miniature-prod.moysklad.ru/miniature/e154a3ce-7f99-11ed-0a80-07f300016d79/documentminiature/cc7b1239-1c31-44ba-b6e2-e902fb9bc54f"
+            },
+            "tiny": {
+                "href": "https://tinyimage-prod.moysklad.ru/static/tinyimage/e154a3ce-7f99-11ed-0a80-07f300016d79/tinyimage/c3059abe-6307-4600-bad6-507a64033ee0/t.png",
+                "mediaType": "application/octet-stream"
+            }
+        },
+        "externalCode": "WuE7R63kjiwmJQqQj6yPv1",
+        "stockDays": 41.88
+    },
+    {
+        "meta": {
+            "href": "https://online.moysklad.ru/api/remap/1.2/entity/product/4cc043b9-7fa2-11ed-0a80-0e62003f2aee?expand=supplier",
+            "metadataHref": "https://online.moysklad.ru/api/remap/1.2/entity/product/metadata",
+            "type": "product",
+            "mediaType": "application/json",
+            "uuidHref": "https://online.moysklad.ru/app/#good/edit?id=4cc039dd-7fa2-11ed-0a80-0e62003f2aec"
+        },
+        "stock": 10.0,
+        "inTransit": 0.0,
+        "reserve": 0.0,
+        "quantity": 10.0,
+        "name": "Green Beam",
+        "code": "00022",
+        "price": 10400.0,
+        "salePrice": 40000.0,
+        "uom": {
+            "meta": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/entity/uom/19f1edc0-fc42-4001-94cb-c9ec9c62ec10",
+                "metadataHref": "https://online.moysklad.ru/api/remap/1.2/entity/uom/metadata",
+                "type": "uom",
+                "mediaType": "application/json"
+            },
+            "name": "шт"
+        },
+        "folder": {
+            "meta": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/entity/productfolder/564bb87b-7f9a-11ed-0a80-05a1003dcfbd",
+                "metadataHref": "https://online.moysklad.ru/api/remap/1.2/entity/productfolder/metadata",
+                "type": "productfolder",
+                "mediaType": "application/json",
+                "uuidHref": "https://online.moysklad.ru/app/#good/edit?id=564bb87b-7f9a-11ed-0a80-05a1003dcfbd"
+            },
+            "name": "Dark Side 30g",
+            "pathName": "Табак"
+        },
+        "image": {
+            "meta": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/download/b8f68916-c142-4b67-a568-1b82f5011aa5",
+                "mediaType": "application/octet-stream"
+            },
+            "title": "green-beam-darkside-tobacco",
+            "filename": "green-beam-darkside-tobacco.jpg",
+            "size": 52854,
+            "updated": "2022-12-19 16:37:30.852",
+            "miniature": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/download/b8f68916-c142-4b67-a568-1b82f5011aa5?miniature=true",
+                "mediaType": "application/octet-stream",
+                "downloadHref": "https://miniature-prod.moysklad.ru/miniature/e154a3ce-7f99-11ed-0a80-07f300016d79/documentminiature/13ce9144-84a5-4dd2-94af-369f655a015d"
+            },
+            "tiny": {
+                "href": "https://tinyimage-prod.moysklad.ru/static/tinyimage/e154a3ce-7f99-11ed-0a80-07f300016d79/tinyimage/ece643a3-36e2-4cb4-8773-04730ca422d9/t.png",
+                "mediaType": "application/octet-stream"
+            }
+        },
+        "externalCode": "M44abr7jh355FdgtVS47p1",
+        "stockDays": 41.88
+    },
+    {
+        "meta": {
+            "href": "https://online.moysklad.ru/api/remap/1.2/entity/product/5b008bb0-7fa0-11ed-0a80-00ec003e38d5?expand=supplier",
+            "metadataHref": "https://online.moysklad.ru/api/remap/1.2/entity/product/metadata",
+            "type": "product",
+            "mediaType": "application/json",
+            "uuidHref": "https://online.moysklad.ru/app/#good/edit?id=5b007cbd-7fa0-11ed-0a80-00ec003e38d3"
+        },
+        "stock": 15.0,
+        "inTransit": 0.0,
+        "reserve": 0.0,
+        "quantity": 15.0,
+        "name": "Ice Granny",
+        "code": "00015",
+        "price": 10400.0,
+        "salePrice": 40000.0,
+        "uom": {
+            "meta": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/entity/uom/19f1edc0-fc42-4001-94cb-c9ec9c62ec10",
+                "metadataHref": "https://online.moysklad.ru/api/remap/1.2/entity/uom/metadata",
+                "type": "uom",
+                "mediaType": "application/json"
+            },
+            "name": "шт"
+        },
+        "folder": {
+            "meta": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/entity/productfolder/564bb87b-7f9a-11ed-0a80-05a1003dcfbd",
+                "metadataHref": "https://online.moysklad.ru/api/remap/1.2/entity/productfolder/metadata",
+                "type": "productfolder",
+                "mediaType": "application/json",
+                "uuidHref": "https://online.moysklad.ru/app/#good/edit?id=564bb87b-7f9a-11ed-0a80-05a1003dcfbd"
+            },
+            "name": "Dark Side 30g",
+            "pathName": "Табак"
+        },
+        "image": {
+            "meta": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/download/6fa5bb37-01dc-4f57-9833-5edcb724cd28",
+                "mediaType": "application/octet-stream"
+            },
+            "title": "ice-granny-darkside-tobacco",
+            "filename": "ice-granny-darkside-tobacco.jpg",
+            "size": 45588,
+            "updated": "2022-12-19 16:23:31.260",
+            "miniature": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/download/6fa5bb37-01dc-4f57-9833-5edcb724cd28?miniature=true",
+                "mediaType": "application/octet-stream",
+                "downloadHref": "https://miniature-prod.moysklad.ru/miniature/e154a3ce-7f99-11ed-0a80-07f300016d79/documentminiature/4f528615-4003-488d-99ae-2ff4fcf25d1f"
+            },
+            "tiny": {
+                "href": "https://tinyimage-prod.moysklad.ru/static/tinyimage/e154a3ce-7f99-11ed-0a80-07f300016d79/tinyimage/37510e59-fdbe-4bc9-9af2-bf4ac8141147/t.png",
+                "mediaType": "application/octet-stream"
+            }
+        },
+        "externalCode": "b81RaKigjy5jXdetp7WMx1",
+        "stockDays": 41.88
+    },
+    {
+        "meta": {
+            "href": "https://online.moysklad.ru/api/remap/1.2/entity/product/c849b7d7-7f9b-11ed-0a80-011b003dd2da?expand=supplier",
+            "metadataHref": "https://online.moysklad.ru/api/remap/1.2/entity/product/metadata",
+            "type": "product",
+            "mediaType": "application/json",
+            "uuidHref": "https://online.moysklad.ru/app/#good/edit?id=c849ae66-7f9b-11ed-0a80-011b003dd2d8"
+        },
+        "stock": 1.0,
+        "inTransit": 0.0,
+        "reserve": 0.0,
+        "quantity": 1.0,
+        "name": "Pineapple Pulse",
+        "code": "00002",
+        "price": 10400.0,
+        "salePrice": 40000.0,
+        "uom": {
+            "meta": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/entity/uom/19f1edc0-fc42-4001-94cb-c9ec9c62ec10",
+                "metadataHref": "https://online.moysklad.ru/api/remap/1.2/entity/uom/metadata",
+                "type": "uom",
+                "mediaType": "application/json"
+            },
+            "name": "шт"
+        },
+        "folder": {
+            "meta": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/entity/productfolder/564bb87b-7f9a-11ed-0a80-05a1003dcfbd",
+                "metadataHref": "https://online.moysklad.ru/api/remap/1.2/entity/productfolder/metadata",
+                "type": "productfolder",
+                "mediaType": "application/json",
+                "uuidHref": "https://online.moysklad.ru/app/#good/edit?id=564bb87b-7f9a-11ed-0a80-05a1003dcfbd"
+            },
+            "name": "Dark Side 30g",
+            "pathName": "Табак"
+        },
+        "image": {
+            "meta": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/download/72b09106-6d9a-4bc2-9f52-b68c68e788e2",
+                "mediaType": "application/octet-stream"
+            },
+            "title": "702219bed4ba9bba7eaaaa16d603389e6071fadf",
+            "filename": "702219bed4ba9bba7eaaaa16d603389e6071fadf.jpeg",
+            "size": 1168477,
+            "updated": "2022-12-19 15:50:38.033",
+            "miniature": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/download/72b09106-6d9a-4bc2-9f52-b68c68e788e2?miniature=true",
+                "mediaType": "application/octet-stream",
+                "downloadHref": "https://miniature-prod.moysklad.ru/miniature/e154a3ce-7f99-11ed-0a80-07f300016d79/documentminiature/25058c4b-0279-456c-a281-7bb1fdd8b69b"
+            },
+            "tiny": {
+                "href": "https://tinyimage-prod.moysklad.ru/static/tinyimage/e154a3ce-7f99-11ed-0a80-07f300016d79/tinyimage/4a1a8454-bfcb-4bff-94d8-f1ab0d85825c/t.png",
+                "mediaType": "application/octet-stream"
+            }
+        },
+        "externalCode": "QuWSoRQ5hrBtUVn8-2WKe0",
+        "stockDays": 41.88
+    },
+    {
+        "meta": {
+            "href": "https://online.moysklad.ru/api/remap/1.2/entity/product/cefcdc0d-7fa3-11ed-0a80-09f60040737c?expand=supplier",
+            "metadataHref": "https://online.moysklad.ru/api/remap/1.2/entity/product/metadata",
+            "type": "product",
+            "mediaType": "application/json",
+            "uuidHref": "https://online.moysklad.ru/app/#good/edit?id=cefcd22f-7fa3-11ed-0a80-09f60040737a"
+        },
+        "stock": 2.0,
+        "inTransit": 0.0,
+        "reserve": 0.0,
+        "quantity": 2.0,
+        "name": "Must Have Apple Drops",
+        "code": "00027",
+        "price": 8000.0,
+        "salePrice": 40000.0,
+        "uom": {
+            "meta": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/entity/uom/19f1edc0-fc42-4001-94cb-c9ec9c62ec10",
+                "metadataHref": "https://online.moysklad.ru/api/remap/1.2/entity/uom/metadata",
+                "type": "uom",
+                "mediaType": "application/json"
+            },
+            "name": "шт"
+        },
+        "folder": {
+            "meta": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/entity/productfolder/6c8c5ccf-7f9a-11ed-0a80-00ec003ccdf3",
+                "metadataHref": "https://online.moysklad.ru/api/remap/1.2/entity/productfolder/metadata",
+                "type": "productfolder",
+                "mediaType": "application/json",
+                "uuidHref": "https://online.moysklad.ru/app/#good/edit?id=6c8c5ccf-7f9a-11ed-0a80-00ec003ccdf3"
+            },
+            "name": "Must Have 30g",
+            "pathName": "Табак"
+        },
+        "image": {
+            "meta": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/download/eb4410c9-49a0-44e1-9d6c-cb56fb598549",
+                "mediaType": "application/octet-stream"
+            },
+            "title": "Apple drops-750x750-1000x1000",
+            "filename": "Apple drops-750x750-1000x1000.jpg",
+            "size": 182562,
+            "updated": "2022-12-19 16:48:19.765",
+            "miniature": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/download/eb4410c9-49a0-44e1-9d6c-cb56fb598549?miniature=true",
+                "mediaType": "application/octet-stream",
+                "downloadHref": "https://miniature-prod.moysklad.ru/miniature/e154a3ce-7f99-11ed-0a80-07f300016d79/documentminiature/6a6abb56-9936-4e14-bb6d-5d17ac58961b"
+            },
+            "tiny": {
+                "href": "https://tinyimage-prod.moysklad.ru/static/tinyimage/e154a3ce-7f99-11ed-0a80-07f300016d79/tinyimage/ea44b68d-fe3f-4701-9b4a-03bd55683df4/t.png",
+                "mediaType": "application/octet-stream"
+            }
+        },
+        "externalCode": "tN7cj29eh5zt0KA3UR1OY1",
+        "stockDays": 41.88
+    },
+    {
+        "meta": {
+            "href": "https://online.moysklad.ru/api/remap/1.2/entity/product/d2b75df9-9636-11ed-0a80-0983005d1aed?expand=supplier",
+            "metadataHref": "https://online.moysklad.ru/api/remap/1.2/entity/product/metadata",
+            "type": "product",
+            "mediaType": "application/json",
+            "uuidHref": "https://online.moysklad.ru/app/#good/edit?id=d2b75736-9636-11ed-0a80-0983005d1aeb"
+        },
+        "stock": 2.0,
+        "inTransit": 0.0,
+        "reserve": 0.0,
+        "quantity": 2.0,
+        "name": "Must Have Baikal",
+        "code": "00074",
+        "price": 9200.0,
+        "salePrice": 40000.0,
+        "uom": {
+            "meta": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/entity/uom/19f1edc0-fc42-4001-94cb-c9ec9c62ec10",
+                "metadataHref": "https://online.moysklad.ru/api/remap/1.2/entity/uom/metadata",
+                "type": "uom",
+                "mediaType": "application/json"
+            },
+            "name": "шт"
+        },
+        "folder": {
+            "meta": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/entity/productfolder/6c8c5ccf-7f9a-11ed-0a80-00ec003ccdf3",
+                "metadataHref": "https://online.moysklad.ru/api/remap/1.2/entity/productfolder/metadata",
+                "type": "productfolder",
+                "mediaType": "application/json",
+                "uuidHref": "https://online.moysklad.ru/app/#good/edit?id=6c8c5ccf-7f9a-11ed-0a80-00ec003ccdf3"
+            },
+            "name": "Must Have 30g",
+            "pathName": "Табак"
+        },
+        "image": {
+            "meta": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/download/2bafc469-b03c-4b61-8d59-2c4ae97a4d05",
+                "mediaType": "application/octet-stream"
+            },
+            "title": "tabak-dlya-kalyanaa-musthave-baikal-masthev-bajkal-kupit-perm",
+            "filename": "tabak-dlya-kalyanaa-musthave-baikal-masthev-bajkal-kupit-perm.jpg",
+            "size": 1587572,
+            "updated": "2023-01-17 10:16:07.521",
+            "miniature": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/download/2bafc469-b03c-4b61-8d59-2c4ae97a4d05?miniature=true",
+                "mediaType": "application/octet-stream",
+                "downloadHref": "https://miniature-prod.moysklad.ru/miniature/e154a3ce-7f99-11ed-0a80-07f300016d79/documentminiature/778a3bee-e335-417b-a4be-db4cd76907c6"
+            },
+            "tiny": {
+                "href": "https://tinyimage-prod.moysklad.ru/static/tinyimage/e154a3ce-7f99-11ed-0a80-07f300016d79/tinyimage/79b5e36c-f84c-4c33-a0aa-020e08239d4f/t.png",
+                "mediaType": "application/octet-stream"
+            }
+        },
+        "externalCode": "7deDdpAfj65ZlFjpx-bfr2",
+        "stockDays": 14.21
+    },
+    {
+        "meta": {
+            "href": "https://online.moysklad.ru/api/remap/1.2/entity/product/9d4a41a0-9636-11ed-0a80-0629005e1a3e?expand=supplier",
+            "metadataHref": "https://online.moysklad.ru/api/remap/1.2/entity/product/metadata",
+            "type": "product",
+            "mediaType": "application/json",
+            "uuidHref": "https://online.moysklad.ru/app/#good/edit?id=9d4a38fe-9636-11ed-0a80-0629005e1a3c"
+        },
+        "stock": 3.0,
+        "inTransit": 0.0,
+        "reserve": 0.0,
+        "quantity": 3.0,
+        "name": "Must Have Barberry Candy",
+        "code": "00073",
+        "price": 9200.0,
+        "salePrice": 40000.0,
+        "uom": {
+            "meta": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/entity/uom/19f1edc0-fc42-4001-94cb-c9ec9c62ec10",
+                "metadataHref": "https://online.moysklad.ru/api/remap/1.2/entity/uom/metadata",
+                "type": "uom",
+                "mediaType": "application/json"
+            },
+            "name": "шт"
+        },
+        "folder": {
+            "meta": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/entity/productfolder/6c8c5ccf-7f9a-11ed-0a80-00ec003ccdf3",
+                "metadataHref": "https://online.moysklad.ru/api/remap/1.2/entity/productfolder/metadata",
+                "type": "productfolder",
+                "mediaType": "application/json",
+                "uuidHref": "https://online.moysklad.ru/app/#good/edit?id=6c8c5ccf-7f9a-11ed-0a80-00ec003ccdf3"
+            },
+            "name": "Must Have 30g",
+            "pathName": "Табак"
+        },
+        "image": {
+            "meta": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/download/aafd668a-cf88-40e7-a707-0a21c567739e",
+                "mediaType": "application/octet-stream"
+            },
+            "title": "musthave_barberry_candy_web",
+            "filename": "musthave_barberry_candy_web.jpg",
+            "size": 276278,
+            "updated": "2023-01-17 10:14:55.467",
+            "miniature": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/download/aafd668a-cf88-40e7-a707-0a21c567739e?miniature=true",
+                "mediaType": "application/octet-stream",
+                "downloadHref": "https://miniature-prod.moysklad.ru/miniature/e154a3ce-7f99-11ed-0a80-07f300016d79/documentminiature/d6261ac8-95eb-4128-a817-b01b80da5133"
+            },
+            "tiny": {
+                "href": "https://tinyimage-prod.moysklad.ru/static/tinyimage/e154a3ce-7f99-11ed-0a80-07f300016d79/tinyimage/2323c5a3-dbef-47a0-abe3-e65a155716cb/t.png",
+                "mediaType": "application/octet-stream"
+            }
+        },
+        "externalCode": "F1AV8QSgjlL0sX0I7zAiS0",
+        "stockDays": 14.21
+    },
+    {
+        "meta": {
+            "href": "https://online.moysklad.ru/api/remap/1.2/entity/product/0d036164-7fa4-11ed-0a80-04b700408818?expand=supplier",
+            "metadataHref": "https://online.moysklad.ru/api/remap/1.2/entity/product/metadata",
+            "type": "product",
+            "mediaType": "application/json",
+            "uuidHref": "https://online.moysklad.ru/app/#good/edit?id=0d035971-7fa4-11ed-0a80-04b700408816"
+        },
+        "stock": 1.0,
+        "inTransit": 0.0,
+        "reserve": 0.0,
+        "quantity": 1.0,
+        "name": "Must Have BlackCurrant",
+        "code": "00028",
+        "price": 8000.0,
+        "salePrice": 40000.0,
+        "uom": {
+            "meta": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/entity/uom/19f1edc0-fc42-4001-94cb-c9ec9c62ec10",
+                "metadataHref": "https://online.moysklad.ru/api/remap/1.2/entity/uom/metadata",
+                "type": "uom",
+                "mediaType": "application/json"
+            },
+            "name": "шт"
+        },
+        "folder": {
+            "meta": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/entity/productfolder/6c8c5ccf-7f9a-11ed-0a80-00ec003ccdf3",
+                "metadataHref": "https://online.moysklad.ru/api/remap/1.2/entity/productfolder/metadata",
+                "type": "productfolder",
+                "mediaType": "application/json",
+                "uuidHref": "https://online.moysklad.ru/app/#good/edit?id=6c8c5ccf-7f9a-11ed-0a80-00ec003ccdf3"
+            },
+            "name": "Must Have 30g",
+            "pathName": "Табак"
+        },
+        "image": {
+            "meta": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/download/7d10e8c6-045b-45d9-9f6c-6ae7afb094a1",
+                "mediaType": "application/octet-stream"
+            },
+            "title": "948618602_t_must-125-black-currant-700x450-600x450",
+            "filename": "948618602_t_must-125-black-currant-700x450-600x450.jpg",
+            "size": 60887,
+            "updated": "2022-12-19 16:50:01.209",
+            "miniature": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/download/7d10e8c6-045b-45d9-9f6c-6ae7afb094a1?miniature=true",
+                "mediaType": "application/octet-stream",
+                "downloadHref": "https://miniature-prod.moysklad.ru/miniature/e154a3ce-7f99-11ed-0a80-07f300016d79/documentminiature/87803411-6caf-4163-ba6f-ff51a76940ca"
+            },
+            "tiny": {
+                "href": "https://tinyimage-prod.moysklad.ru/static/tinyimage/e154a3ce-7f99-11ed-0a80-07f300016d79/tinyimage/0e9a7de1-6694-4259-b3d9-2471b815152e/t.png",
+                "mediaType": "application/octet-stream"
+            }
+        },
+        "externalCode": "FgW-tRGchAnFQsKO-2b7J0",
+        "stockDays": 41.88
+    },
+    {
+        "meta": {
+            "href": "https://online.moysklad.ru/api/remap/1.2/entity/product/fd74e662-9636-11ed-0a80-012d005cb22f?expand=supplier",
+            "metadataHref": "https://online.moysklad.ru/api/remap/1.2/entity/product/metadata",
+            "type": "product",
+            "mediaType": "application/json",
+            "uuidHref": "https://online.moysklad.ru/app/#good/edit?id=fd74e024-9636-11ed-0a80-012d005cb22d"
+        },
+        "stock": 3.0,
+        "inTransit": 0.0,
+        "reserve": 0.0,
+        "quantity": 3.0,
+        "name": "Must Have Cherry - Cola",
+        "code": "00075",
+        "price": 9200.0,
+        "salePrice": 40000.0,
+        "uom": {
+            "meta": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/entity/uom/19f1edc0-fc42-4001-94cb-c9ec9c62ec10",
+                "metadataHref": "https://online.moysklad.ru/api/remap/1.2/entity/uom/metadata",
+                "type": "uom",
+                "mediaType": "application/json"
+            },
+            "name": "шт"
+        },
+        "folder": {
+            "meta": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/entity/productfolder/6c8c5ccf-7f9a-11ed-0a80-00ec003ccdf3",
+                "metadataHref": "https://online.moysklad.ru/api/remap/1.2/entity/productfolder/metadata",
+                "type": "productfolder",
+                "mediaType": "application/json",
+                "uuidHref": "https://online.moysklad.ru/app/#good/edit?id=6c8c5ccf-7f9a-11ed-0a80-00ec003ccdf3"
+            },
+            "name": "Must Have 30g",
+            "pathName": "Табак"
+        },
+        "image": {
+            "meta": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/download/fe627757-0309-4925-b7b4-48df040a5ea0",
+                "mediaType": "application/octet-stream"
+            },
+            "title": "must_have_cherry_cola_web",
+            "filename": "must_have_cherry_cola_web.jpg",
+            "size": 940639,
+            "updated": "2023-01-17 10:17:18.889",
+            "miniature": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/download/fe627757-0309-4925-b7b4-48df040a5ea0?miniature=true",
+                "mediaType": "application/octet-stream",
+                "downloadHref": "https://miniature-prod.moysklad.ru/miniature/e154a3ce-7f99-11ed-0a80-07f300016d79/documentminiature/51c67fd2-6669-4d1b-9825-7ccf011a24be"
+            },
+            "tiny": {
+                "href": "https://tinyimage-prod.moysklad.ru/static/tinyimage/e154a3ce-7f99-11ed-0a80-07f300016d79/tinyimage/1508dc98-5842-4297-b27d-573b63ed2e1d/t.png",
+                "mediaType": "application/octet-stream"
+            }
+        },
+        "externalCode": "f2LuunhrguYaoQORLMufu1",
+        "stockDays": 14.21
+    },
+    {
+        "meta": {
+            "href": "https://online.moysklad.ru/api/remap/1.2/entity/product/626e1e8c-9637-11ed-0a80-012d005ccba9?expand=supplier",
+            "metadataHref": "https://online.moysklad.ru/api/remap/1.2/entity/product/metadata",
+            "type": "product",
+            "mediaType": "application/json",
+            "uuidHref": "https://online.moysklad.ru/app/#good/edit?id=626e145f-9637-11ed-0a80-012d005ccba7"
+        },
+        "stock": 3.0,
+        "inTransit": 0.0,
+        "reserve": 0.0,
+        "quantity": 3.0,
+        "name": "Must Have Lemon -Lime",
+        "code": "00077",
+        "price": 9200.0,
+        "salePrice": 40000.0,
+        "uom": {
+            "meta": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/entity/uom/19f1edc0-fc42-4001-94cb-c9ec9c62ec10",
+                "metadataHref": "https://online.moysklad.ru/api/remap/1.2/entity/uom/metadata",
+                "type": "uom",
+                "mediaType": "application/json"
+            },
+            "name": "шт"
+        },
+        "folder": {
+            "meta": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/entity/productfolder/6c8c5ccf-7f9a-11ed-0a80-00ec003ccdf3",
+                "metadataHref": "https://online.moysklad.ru/api/remap/1.2/entity/productfolder/metadata",
+                "type": "productfolder",
+                "mediaType": "application/json",
+                "uuidHref": "https://online.moysklad.ru/app/#good/edit?id=6c8c5ccf-7f9a-11ed-0a80-00ec003ccdf3"
+            },
+            "name": "Must Have 30g",
+            "pathName": "Табак"
+        },
+        "image": {
+            "meta": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/download/8a8b3e51-a480-4fc4-9832-6c8ad1549124",
+                "mediaType": "application/octet-stream"
+            },
+            "title": "lemon lime-600x600-1000x1000",
+            "filename": "lemon lime-600x600-1000x1000.jpg",
+            "size": 175418,
+            "updated": "2023-01-17 10:20:09.013",
+            "miniature": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/download/8a8b3e51-a480-4fc4-9832-6c8ad1549124?miniature=true",
+                "mediaType": "application/octet-stream",
+                "downloadHref": "https://miniature-prod.moysklad.ru/miniature/e154a3ce-7f99-11ed-0a80-07f300016d79/documentminiature/307140fd-f22e-4199-b803-d931f14f18a3"
+            },
+            "tiny": {
+                "href": "https://tinyimage-prod.moysklad.ru/static/tinyimage/e154a3ce-7f99-11ed-0a80-07f300016d79/tinyimage/0a9b20f6-5b0f-4be2-9636-e15fdac585b9/t.png",
+                "mediaType": "application/octet-stream"
+            }
+        },
+        "externalCode": "HbFZmFFDiOt70mpc8PYsy1",
+        "stockDays": 14.21
+    },
+    {
+        "meta": {
+            "href": "https://online.moysklad.ru/api/remap/1.2/entity/product/362d927d-7fa5-11ed-0a80-00ec003f46b3?expand=supplier",
+            "metadataHref": "https://online.moysklad.ru/api/remap/1.2/entity/product/metadata",
+            "type": "product",
+            "mediaType": "application/json",
+            "uuidHref": "https://online.moysklad.ru/app/#good/edit?id=362d8b99-7fa5-11ed-0a80-00ec003f46b1"
+        },
+        "stock": 3.0,
+        "inTransit": 0.0,
+        "reserve": 0.0,
+        "quantity": 3.0,
+        "name": "Must Have NordStar",
+        "code": "00033",
+        "price": 8000.0,
+        "salePrice": 40000.0,
+        "uom": {
+            "meta": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/entity/uom/19f1edc0-fc42-4001-94cb-c9ec9c62ec10",
+                "metadataHref": "https://online.moysklad.ru/api/remap/1.2/entity/uom/metadata",
+                "type": "uom",
+                "mediaType": "application/json"
+            },
+            "name": "шт"
+        },
+        "folder": {
+            "meta": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/entity/productfolder/6c8c5ccf-7f9a-11ed-0a80-00ec003ccdf3",
+                "metadataHref": "https://online.moysklad.ru/api/remap/1.2/entity/productfolder/metadata",
+                "type": "productfolder",
+                "mediaType": "application/json",
+                "uuidHref": "https://online.moysklad.ru/app/#good/edit?id=6c8c5ccf-7f9a-11ed-0a80-00ec003ccdf3"
+            },
+            "name": "Must Have 30g",
+            "pathName": "Табак"
+        },
+        "image": {
+            "meta": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/download/86a59c06-fb45-49d4-97d4-8c9a6e80767d",
+                "mediaType": "application/octet-stream"
+            },
+            "title": "1853.550x0_2x",
+            "filename": "1853.550x0_2x.jpg",
+            "size": 257367,
+            "updated": "2022-12-19 16:58:17.571",
+            "miniature": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/download/86a59c06-fb45-49d4-97d4-8c9a6e80767d?miniature=true",
+                "mediaType": "application/octet-stream",
+                "downloadHref": "https://miniature-prod.moysklad.ru/miniature/e154a3ce-7f99-11ed-0a80-07f300016d79/documentminiature/7a39a7af-28c9-4f87-9ef9-8db6698300a6"
+            },
+            "tiny": {
+                "href": "https://tinyimage-prod.moysklad.ru/static/tinyimage/e154a3ce-7f99-11ed-0a80-07f300016d79/tinyimage/c657786b-127b-4b81-894c-68f9296b8f23/t.png",
+                "mediaType": "application/octet-stream"
+            }
+        },
+        "externalCode": "Z5dDkcdxjEvDghqK0IEuT0",
+        "stockDays": 41.88
+    },
+    {
+        "meta": {
+            "href": "https://online.moysklad.ru/api/remap/1.2/entity/product/ef3c1aaf-7fa2-11ed-0a80-0d78003f5787?expand=supplier",
+            "metadataHref": "https://online.moysklad.ru/api/remap/1.2/entity/product/metadata",
+            "type": "product",
+            "mediaType": "application/json",
+            "uuidHref": "https://online.moysklad.ru/app/#good/edit?id=ef3c0f10-7fa2-11ed-0a80-0d78003f5785"
+        },
+        "stock": 2.0,
+        "inTransit": 0.0,
+        "reserve": 0.0,
+        "quantity": 2.0,
+        "name": "Must Have Orange team",
+        "code": "00024",
+        "price": 9200.0,
+        "salePrice": 40000.0,
+        "uom": {
+            "meta": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/entity/uom/19f1edc0-fc42-4001-94cb-c9ec9c62ec10",
+                "metadataHref": "https://online.moysklad.ru/api/remap/1.2/entity/uom/metadata",
+                "type": "uom",
+                "mediaType": "application/json"
+            },
+            "name": "шт"
+        },
+        "folder": {
+            "meta": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/entity/productfolder/6c8c5ccf-7f9a-11ed-0a80-00ec003ccdf3",
+                "metadataHref": "https://online.moysklad.ru/api/remap/1.2/entity/productfolder/metadata",
+                "type": "productfolder",
+                "mediaType": "application/json",
+                "uuidHref": "https://online.moysklad.ru/app/#good/edit?id=6c8c5ccf-7f9a-11ed-0a80-00ec003ccdf3"
+            },
+            "name": "Must Have 30g",
+            "pathName": "Табак"
+        },
+        "image": {
+            "meta": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/download/262cbbae-44a2-458f-bda2-8fd76affb9fe",
+                "mediaType": "application/octet-stream"
+            },
+            "title": "must_have_orange_team_web",
+            "filename": "must_have_orange_team_web.jpg",
+            "size": 280789,
+            "updated": "2022-12-19 16:41:56.357",
+            "miniature": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/download/262cbbae-44a2-458f-bda2-8fd76affb9fe?miniature=true",
+                "mediaType": "application/octet-stream",
+                "downloadHref": "https://miniature-prod.moysklad.ru/miniature/e154a3ce-7f99-11ed-0a80-07f300016d79/documentminiature/a30dce66-4ad3-4917-ac0b-b7e62ad12244"
+            },
+            "tiny": {
+                "href": "https://tinyimage-prod.moysklad.ru/static/tinyimage/e154a3ce-7f99-11ed-0a80-07f300016d79/tinyimage/6eb12d79-c236-42e2-bcf8-121c9d84c17b/t.png",
+                "mediaType": "application/octet-stream"
+            }
+        },
+        "externalCode": "Wg0NPJ3sj94w6Co1ET5Ge2",
+        "stockDays": 14.21
+    },
+    {
+        "meta": {
+            "href": "https://online.moysklad.ru/api/remap/1.2/entity/product/b7445965-7fa2-11ed-0a80-011b003f54bc?expand=supplier",
+            "metadataHref": "https://online.moysklad.ru/api/remap/1.2/entity/product/metadata",
+            "type": "product",
+            "mediaType": "application/json",
+            "uuidHref": "https://online.moysklad.ru/app/#good/edit?id=b7444e15-7fa2-11ed-0a80-011b003f54ba"
+        },
+        "stock": 3.0,
+        "inTransit": 0.0,
+        "reserve": 0.0,
+        "quantity": 3.0,
+        "name": "Must Have PINKMAN",
+        "code": "00023",
+        "price": 9200.0,
+        "salePrice": 40000.0,
+        "uom": {
+            "meta": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/entity/uom/19f1edc0-fc42-4001-94cb-c9ec9c62ec10",
+                "metadataHref": "https://online.moysklad.ru/api/remap/1.2/entity/uom/metadata",
+                "type": "uom",
+                "mediaType": "application/json"
+            },
+            "name": "шт"
+        },
+        "folder": {
+            "meta": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/entity/productfolder/6c8c5ccf-7f9a-11ed-0a80-00ec003ccdf3",
+                "metadataHref": "https://online.moysklad.ru/api/remap/1.2/entity/productfolder/metadata",
+                "type": "productfolder",
+                "mediaType": "application/json",
+                "uuidHref": "https://online.moysklad.ru/app/#good/edit?id=6c8c5ccf-7f9a-11ed-0a80-00ec003ccdf3"
+            },
+            "name": "Must Have 30g",
+            "pathName": "Табак"
+        },
+        "image": {
+            "meta": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/download/4fc64a54-46c7-4871-8c4e-a2a29f0ceb7d",
+                "mediaType": "application/octet-stream"
+            },
+            "title": "Tabak-Must-Have-Pinkman-Pinkmen-125-gr",
+            "filename": "Tabak-Must-Have-Pinkman-Pinkmen-125-gr.jpg",
+            "size": 91642,
+            "updated": "2022-12-19 16:40:29.219",
+            "miniature": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/download/4fc64a54-46c7-4871-8c4e-a2a29f0ceb7d?miniature=true",
+                "mediaType": "application/octet-stream",
+                "downloadHref": "https://miniature-prod.moysklad.ru/miniature/e154a3ce-7f99-11ed-0a80-07f300016d79/documentminiature/8abd2ae0-8f99-41e4-a48f-e68b0176c716"
+            },
+            "tiny": {
+                "href": "https://tinyimage-prod.moysklad.ru/static/tinyimage/e154a3ce-7f99-11ed-0a80-07f300016d79/tinyimage/f65e00cb-1e26-4dc8-9a83-32348f2ebb78/t.png",
+                "mediaType": "application/octet-stream"
+            }
+        },
+        "externalCode": "XRLu7rI5gkWiHUgZtbarf3",
+        "stockDays": 14.21
+    },
+    {
+        "meta": {
+            "href": "https://online.moysklad.ru/api/remap/1.2/entity/product/364aecd8-9637-11ed-0a80-110900417feb?expand=supplier",
+            "metadataHref": "https://online.moysklad.ru/api/remap/1.2/entity/product/metadata",
+            "type": "product",
+            "mediaType": "application/json",
+            "uuidHref": "https://online.moysklad.ru/app/#good/edit?id=364ae762-9637-11ed-0a80-110900417fe9"
+        },
+        "stock": 5.0,
+        "inTransit": 0.0,
+        "reserve": 0.0,
+        "quantity": 5.0,
+        "name": "Must Have Rocketman",
+        "code": "00076",
+        "price": 9200.0,
+        "salePrice": 40000.0,
+        "uom": {
+            "meta": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/entity/uom/19f1edc0-fc42-4001-94cb-c9ec9c62ec10",
+                "metadataHref": "https://online.moysklad.ru/api/remap/1.2/entity/uom/metadata",
+                "type": "uom",
+                "mediaType": "application/json"
+            },
+            "name": "шт"
+        },
+        "folder": {
+            "meta": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/entity/productfolder/6c8c5ccf-7f9a-11ed-0a80-00ec003ccdf3",
+                "metadataHref": "https://online.moysklad.ru/api/remap/1.2/entity/productfolder/metadata",
+                "type": "productfolder",
+                "mediaType": "application/json",
+                "uuidHref": "https://online.moysklad.ru/app/#good/edit?id=6c8c5ccf-7f9a-11ed-0a80-00ec003ccdf3"
+            },
+            "name": "Must Have 30g",
+            "pathName": "Табак"
+        },
+        "image": {
+            "meta": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/download/efcb2540-1a4f-44fc-9592-3605be686b6e",
+                "mediaType": "application/octet-stream"
+            },
+            "title": "smes-dlya-kalyana-must-have-rocketman-25g-m",
+            "filename": "smes-dlya-kalyana-must-have-rocketman-25g-m.jpg",
+            "size": 68341,
+            "updated": "2023-01-17 10:18:55.491",
+            "miniature": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/download/efcb2540-1a4f-44fc-9592-3605be686b6e?miniature=true",
+                "mediaType": "application/octet-stream",
+                "downloadHref": "https://miniature-prod.moysklad.ru/miniature/e154a3ce-7f99-11ed-0a80-07f300016d79/documentminiature/8cb1ae29-ff45-4329-a7cc-45af00e4e6ef"
+            },
+            "tiny": {
+                "href": "https://tinyimage-prod.moysklad.ru/static/tinyimage/e154a3ce-7f99-11ed-0a80-07f300016d79/tinyimage/19b1c8dd-f7c3-405e-93c4-e5831db3e71a/t.png",
+                "mediaType": "application/octet-stream"
+            }
+        },
+        "externalCode": "01PhASv0j-ZUXXXJHH-Z00",
+        "stockDays": 14.21
+    },
+    {
+        "meta": {
+            "href": "https://online.moysklad.ru/api/remap/1.2/entity/product/cc891766-7fa4-11ed-0a80-0b5a004035f2?expand=supplier",
+            "metadataHref": "https://online.moysklad.ru/api/remap/1.2/entity/product/metadata",
+            "type": "product",
+            "mediaType": "application/json",
+            "uuidHref": "https://online.moysklad.ru/app/#good/edit?id=cc890f16-7fa4-11ed-0a80-0b5a004035f0"
+        },
+        "stock": 6.0,
+        "inTransit": 0.0,
+        "reserve": 0.0,
+        "quantity": 6.0,
+        "name": "Must Have Ruby Grape",
+        "code": "00031",
+        "price": 9200.0,
+        "salePrice": 40000.0,
+        "uom": {
+            "meta": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/entity/uom/19f1edc0-fc42-4001-94cb-c9ec9c62ec10",
+                "metadataHref": "https://online.moysklad.ru/api/remap/1.2/entity/uom/metadata",
+                "type": "uom",
+                "mediaType": "application/json"
+            },
+            "name": "шт"
+        },
+        "folder": {
+            "meta": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/entity/productfolder/6c8c5ccf-7f9a-11ed-0a80-00ec003ccdf3",
+                "metadataHref": "https://online.moysklad.ru/api/remap/1.2/entity/productfolder/metadata",
+                "type": "productfolder",
+                "mediaType": "application/json",
+                "uuidHref": "https://online.moysklad.ru/app/#good/edit?id=6c8c5ccf-7f9a-11ed-0a80-00ec003ccdf3"
+            },
+            "name": "Must Have 30g",
+            "pathName": "Табак"
+        },
+        "image": {
+            "meta": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/download/9c84b830-a7a7-4448-9485-22c356bf85e1",
+                "mediaType": "application/octet-stream"
+            },
+            "title": "MH_Ruby_Grape-600x900",
+            "filename": "MH_Ruby_Grape-600x900.jpg",
+            "size": 184887,
+            "updated": "2022-12-19 16:55:01.506",
+            "miniature": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/download/9c84b830-a7a7-4448-9485-22c356bf85e1?miniature=true",
+                "mediaType": "application/octet-stream",
+                "downloadHref": "https://miniature-prod.moysklad.ru/miniature/e154a3ce-7f99-11ed-0a80-07f300016d79/documentminiature/b9881b12-a474-4177-a951-7f9a49193470"
+            },
+            "tiny": {
+                "href": "https://tinyimage-prod.moysklad.ru/static/tinyimage/e154a3ce-7f99-11ed-0a80-07f300016d79/tinyimage/a814e5c4-472c-4ab5-b8d6-0296146253ce/t.png",
+                "mediaType": "application/octet-stream"
+            }
+        },
+        "externalCode": "P3bH6CXZhvx0hDqZ0vjbp3",
+        "stockDays": 14.21
+    },
+    {
+        "meta": {
+            "href": "https://online.moysklad.ru/api/remap/1.2/entity/product/e0d9fc79-7fa5-11ed-0a80-03e900412c2f?expand=supplier",
+            "metadataHref": "https://online.moysklad.ru/api/remap/1.2/entity/product/metadata",
+            "type": "product",
+            "mediaType": "application/json",
+            "uuidHref": "https://online.moysklad.ru/app/#good/edit?id=e0d9f4e7-7fa5-11ed-0a80-03e900412c2d"
+        },
+        "stock": 1.0,
+        "inTransit": 0.0,
+        "reserve": 0.0,
+        "quantity": 1.0,
+        "name": "Sebero Арктический микс",
+        "code": "00034",
+        "price": 7400.0,
+        "salePrice": 35000.0,
+        "uom": {
+            "meta": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/entity/uom/19f1edc0-fc42-4001-94cb-c9ec9c62ec10",
+                "metadataHref": "https://online.moysklad.ru/api/remap/1.2/entity/uom/metadata",
+                "type": "uom",
+                "mediaType": "application/json"
+            },
+            "name": "шт"
+        },
+        "folder": {
+            "meta": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/entity/productfolder/7aa8116b-7f9a-11ed-0a80-0d78003d48ce",
+                "metadataHref": "https://online.moysklad.ru/api/remap/1.2/entity/productfolder/metadata",
+                "type": "productfolder",
+                "mediaType": "application/json",
+                "uuidHref": "https://online.moysklad.ru/app/#good/edit?id=7aa8116b-7f9a-11ed-0a80-0d78003d48ce"
+            },
+            "name": "Sebero 30g",
+            "pathName": "Табак"
+        },
+        "image": {
+            "meta": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/download/aa207878-dd6d-4447-b66f-c456b2e3265b",
+                "mediaType": "application/octet-stream"
+            },
+            "title": "tabak-dlya-kalyana-sebero-arctic-mix-60-g-fresh-time-chabrecz-vishnya-mango-led",
+            "filename": "tabak-dlya-kalyana-sebero-arctic-mix-60-g-fresh-time-chabrecz-vishnya-mango-led.jpg",
+            "size": 100599,
+            "updated": "2022-12-19 17:03:09.919",
+            "miniature": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/download/aa207878-dd6d-4447-b66f-c456b2e3265b?miniature=true",
+                "mediaType": "application/octet-stream",
+                "downloadHref": "https://miniature-prod.moysklad.ru/miniature/e154a3ce-7f99-11ed-0a80-07f300016d79/documentminiature/b5a772ca-aa12-48a8-b69f-985c327f5a40"
+            },
+            "tiny": {
+                "href": "https://tinyimage-prod.moysklad.ru/static/tinyimage/e154a3ce-7f99-11ed-0a80-07f300016d79/tinyimage/b2992bda-a36d-4a34-a04b-d6c43bfcc8ca/t.png",
+                "mediaType": "application/octet-stream"
+            }
+        },
+        "externalCode": "-Pa-kOwXjZQcmOk59Nxqn0",
+        "stockDays": 41.88
+    },
+    {
+        "meta": {
+            "href": "https://online.moysklad.ru/api/remap/1.2/entity/product/1b5e95b6-7fa6-11ed-0a80-0b5a00406faf?expand=supplier",
+            "metadataHref": "https://online.moysklad.ru/api/remap/1.2/entity/product/metadata",
+            "type": "product",
+            "mediaType": "application/json",
+            "uuidHref": "https://online.moysklad.ru/app/#good/edit?id=1b5e8f02-7fa6-11ed-0a80-0b5a00406fad"
+        },
+        "stock": 1.0,
+        "inTransit": 0.0,
+        "reserve": 0.0,
+        "quantity": 1.0,
+        "name": "Sebero Кукуруза",
+        "code": "00035",
+        "price": 7400.0,
+        "salePrice": 35000.0,
+        "uom": {
+            "meta": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/entity/uom/19f1edc0-fc42-4001-94cb-c9ec9c62ec10",
+                "metadataHref": "https://online.moysklad.ru/api/remap/1.2/entity/uom/metadata",
+                "type": "uom",
+                "mediaType": "application/json"
+            },
+            "name": "шт"
+        },
+        "folder": {
+            "meta": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/entity/productfolder/7aa8116b-7f9a-11ed-0a80-0d78003d48ce",
+                "metadataHref": "https://online.moysklad.ru/api/remap/1.2/entity/productfolder/metadata",
+                "type": "productfolder",
+                "mediaType": "application/json",
+                "uuidHref": "https://online.moysklad.ru/app/#good/edit?id=7aa8116b-7f9a-11ed-0a80-0d78003d48ce"
+            },
+            "name": "Sebero 30g",
+            "pathName": "Табак"
+        },
+        "image": {
+            "meta": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/download/3b784f8f-c7af-45f1-bd41-8351f520781d",
+                "mediaType": "application/octet-stream"
+            },
+            "title": "sebero-classic-corn-600x600",
+            "filename": "sebero-classic-corn-600x600.jpg",
+            "size": 78273,
+            "updated": "2022-12-19 17:04:45.564",
+            "miniature": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/download/3b784f8f-c7af-45f1-bd41-8351f520781d?miniature=true",
+                "mediaType": "application/octet-stream",
+                "downloadHref": "https://miniature-prod.moysklad.ru/miniature/e154a3ce-7f99-11ed-0a80-07f300016d79/documentminiature/20be35c9-1636-4343-833d-c3aa0dac4f9f"
+            },
+            "tiny": {
+                "href": "https://tinyimage-prod.moysklad.ru/static/tinyimage/e154a3ce-7f99-11ed-0a80-07f300016d79/tinyimage/056bbad5-f852-458d-a764-52d1452feee9/t.png",
+                "mediaType": "application/octet-stream"
+            }
+        },
+        "externalCode": "C2pXtIvRi4-FBIXQdwIpe0",
+        "stockDays": 41.88
+    },
+    {
+        "meta": {
+            "href": "https://online.moysklad.ru/api/remap/1.2/entity/product/6b63a990-7fa7-11ed-0a80-011b00404dbb?expand=supplier",
+            "metadataHref": "https://online.moysklad.ru/api/remap/1.2/entity/product/metadata",
+            "type": "product",
+            "mediaType": "application/json",
+            "uuidHref": "https://online.moysklad.ru/app/#good/edit?id=6b63a067-7fa7-11ed-0a80-011b00404db9"
+        },
+        "stock": 11.0,
+        "inTransit": 0.0,
+        "reserve": 0.0,
+        "quantity": 11.0,
+        "name": "StarLine Ананас",
+        "code": "00040",
+        "price": 7400.0,
+        "salePrice": 35000.0,
+        "uom": {
+            "meta": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/entity/uom/19f1edc0-fc42-4001-94cb-c9ec9c62ec10",
+                "metadataHref": "https://online.moysklad.ru/api/remap/1.2/entity/uom/metadata",
+                "type": "uom",
+                "mediaType": "application/json"
+            },
+            "name": "шт"
+        },
+        "folder": {
+            "meta": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/entity/productfolder/89993427-7f9a-11ed-0a80-011b003d809a",
+                "metadataHref": "https://online.moysklad.ru/api/remap/1.2/entity/productfolder/metadata",
+                "type": "productfolder",
+                "mediaType": "application/json",
+                "uuidHref": "https://online.moysklad.ru/app/#good/edit?id=89993427-7f9a-11ed-0a80-011b003d809a"
+            },
+            "name": "Star Line 30 g",
+            "pathName": "Табак"
+        },
+        "image": {
+            "meta": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/download/7af8515a-6ff0-4499-8adb-f37493ad2424",
+                "mediaType": "application/octet-stream"
+            },
+            "title": "27338.970",
+            "filename": "27338.970.jpg",
+            "size": 105119,
+            "updated": "2022-12-19 17:14:05.319",
+            "miniature": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/download/7af8515a-6ff0-4499-8adb-f37493ad2424?miniature=true",
+                "mediaType": "application/octet-stream",
+                "downloadHref": "https://miniature-prod.moysklad.ru/miniature/e154a3ce-7f99-11ed-0a80-07f300016d79/documentminiature/4d9602b0-8db1-42fd-80e8-59f9f9cb5f84"
+            },
+            "tiny": {
+                "href": "https://tinyimage-prod.moysklad.ru/static/tinyimage/e154a3ce-7f99-11ed-0a80-07f300016d79/tinyimage/d343054f-189e-4854-8833-dca5b040827a/t.png",
+                "mediaType": "application/octet-stream"
+            }
+        },
+        "externalCode": "eWvO00zWhhzPfQFDoLxwh3",
+        "stockDays": 25.06
+    },
+    {
+        "meta": {
+            "href": "https://online.moysklad.ru/api/remap/1.2/entity/product/4362ac5b-8f55-11ed-0a80-07fe01079e7a?expand=supplier",
+            "metadataHref": "https://online.moysklad.ru/api/remap/1.2/entity/product/metadata",
+            "type": "product",
+            "mediaType": "application/json",
+            "uuidHref": "https://online.moysklad.ru/app/#good/edit?id=4362a126-8f55-11ed-0a80-07fe01079e78"
+        },
+        "stock": 8.0,
+        "inTransit": 0.0,
+        "reserve": 0.0,
+        "quantity": 8.0,
+        "name": "StarLine Банан",
+        "code": "00061",
+        "price": 7400.0,
+        "salePrice": 35000.0,
+        "uom": {
+            "meta": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/entity/uom/19f1edc0-fc42-4001-94cb-c9ec9c62ec10",
+                "metadataHref": "https://online.moysklad.ru/api/remap/1.2/entity/uom/metadata",
+                "type": "uom",
+                "mediaType": "application/json"
+            },
+            "name": "шт"
+        },
+        "folder": {
+            "meta": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/entity/productfolder/89993427-7f9a-11ed-0a80-011b003d809a",
+                "metadataHref": "https://online.moysklad.ru/api/remap/1.2/entity/productfolder/metadata",
+                "type": "productfolder",
+                "mediaType": "application/json",
+                "uuidHref": "https://online.moysklad.ru/app/#good/edit?id=89993427-7f9a-11ed-0a80-011b003d809a"
+            },
+            "name": "Star Line 30 g",
+            "pathName": "Табак"
+        },
+        "image": {
+            "meta": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/download/903b684f-8d84-4164-9fa8-2702d9503378",
+                "mediaType": "application/octet-stream"
+            },
+            "title": "27334.970",
+            "filename": "27334.970.jpg",
+            "size": 84293,
+            "updated": "2023-01-08 16:06:22.674",
+            "miniature": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/download/903b684f-8d84-4164-9fa8-2702d9503378?miniature=true",
+                "mediaType": "application/octet-stream",
+                "downloadHref": "https://miniature-prod.moysklad.ru/miniature/e154a3ce-7f99-11ed-0a80-07f300016d79/documentminiature/f33aa350-b8e7-48fd-8091-ae9edd14639c"
+            },
+            "tiny": {
+                "href": "https://tinyimage-prod.moysklad.ru/static/tinyimage/e154a3ce-7f99-11ed-0a80-07f300016d79/tinyimage/e036047d-a651-4033-a736-e8f5439112f6/t.png",
+                "mediaType": "application/octet-stream"
+            }
+        },
+        "externalCode": "sZT-QQ38i-xxRFRaY1gDL1",
+        "stockDays": 22.96
+    },
+    {
+        "meta": {
+            "href": "https://online.moysklad.ru/api/remap/1.2/entity/product/b52c353a-7fa6-11ed-0a80-04b700410f82?expand=supplier",
+            "metadataHref": "https://online.moysklad.ru/api/remap/1.2/entity/product/metadata",
+            "type": "product",
+            "mediaType": "application/json",
+            "uuidHref": "https://online.moysklad.ru/app/#good/edit?id=b52c2788-7fa6-11ed-0a80-04b700410f80"
+        },
+        "stock": 6.0,
+        "inTransit": 0.0,
+        "reserve": 0.0,
+        "quantity": 6.0,
+        "name": "StarLine Виноградное Желе",
+        "code": "00037",
+        "price": 7400.0,
+        "salePrice": 35000.0,
+        "uom": {
+            "meta": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/entity/uom/19f1edc0-fc42-4001-94cb-c9ec9c62ec10",
+                "metadataHref": "https://online.moysklad.ru/api/remap/1.2/entity/uom/metadata",
+                "type": "uom",
+                "mediaType": "application/json"
+            },
+            "name": "шт"
+        },
+        "folder": {
+            "meta": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/entity/productfolder/89993427-7f9a-11ed-0a80-011b003d809a",
+                "metadataHref": "https://online.moysklad.ru/api/remap/1.2/entity/productfolder/metadata",
+                "type": "productfolder",
+                "mediaType": "application/json",
+                "uuidHref": "https://online.moysklad.ru/app/#good/edit?id=89993427-7f9a-11ed-0a80-011b003d809a"
+            },
+            "name": "Star Line 30 g",
+            "pathName": "Табак"
+        },
+        "image": {
+            "meta": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/download/91ee9b89-d380-40d5-975c-7fe419fc53bb",
+                "mediaType": "application/octet-stream"
+            },
+            "title": "27336.970",
+            "filename": "27336.970.jpg",
+            "size": 110773,
+            "updated": "2022-12-19 17:09:04.631",
+            "miniature": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/download/91ee9b89-d380-40d5-975c-7fe419fc53bb?miniature=true",
+                "mediaType": "application/octet-stream",
+                "downloadHref": "https://miniature-prod.moysklad.ru/miniature/e154a3ce-7f99-11ed-0a80-07f300016d79/documentminiature/6b4fba60-fc55-4455-b4e6-2883e62b4971"
+            },
+            "tiny": {
+                "href": "https://tinyimage-prod.moysklad.ru/static/tinyimage/e154a3ce-7f99-11ed-0a80-07f300016d79/tinyimage/8b6d1498-f597-4c69-ab34-40cfd8175de4/t.png",
+                "mediaType": "application/octet-stream"
+            }
+        },
+        "externalCode": "cXLAem8yiziAnlvL2f81A1",
+        "stockDays": 22.96
+    },
+    {
+        "meta": {
+            "href": "https://online.moysklad.ru/api/remap/1.2/entity/product/fcb6d4b8-7fa6-11ed-0a80-09f6004120cc?expand=supplier",
+            "metadataHref": "https://online.moysklad.ru/api/remap/1.2/entity/product/metadata",
+            "type": "product",
+            "mediaType": "application/json",
+            "uuidHref": "https://online.moysklad.ru/app/#good/edit?id=fcb6c942-7fa6-11ed-0a80-09f6004120ca"
+        },
+        "stock": 1.0,
+        "inTransit": 0.0,
+        "reserve": 0.0,
+        "quantity": 1.0,
+        "name": "StarLine Груша",
+        "code": "00038",
+        "price": 7400.0,
+        "salePrice": 35000.0,
+        "uom": {
+            "meta": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/entity/uom/19f1edc0-fc42-4001-94cb-c9ec9c62ec10",
+                "metadataHref": "https://online.moysklad.ru/api/remap/1.2/entity/uom/metadata",
+                "type": "uom",
+                "mediaType": "application/json"
+            },
+            "name": "шт"
+        },
+        "folder": {
+            "meta": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/entity/productfolder/89993427-7f9a-11ed-0a80-011b003d809a",
+                "metadataHref": "https://online.moysklad.ru/api/remap/1.2/entity/productfolder/metadata",
+                "type": "productfolder",
+                "mediaType": "application/json",
+                "uuidHref": "https://online.moysklad.ru/app/#good/edit?id=89993427-7f9a-11ed-0a80-011b003d809a"
+            },
+            "name": "Star Line 30 g",
+            "pathName": "Табак"
+        },
+        "image": {
+            "meta": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/download/e421f717-06d4-48f3-bf31-46184fa0f09c",
+                "mediaType": "application/octet-stream"
+            },
+            "title": "27322.970",
+            "filename": "27322.970.jpg",
+            "size": 57616,
+            "updated": "2022-12-19 17:11:02.977",
+            "miniature": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/download/e421f717-06d4-48f3-bf31-46184fa0f09c?miniature=true",
+                "mediaType": "application/octet-stream",
+                "downloadHref": "https://miniature-prod.moysklad.ru/miniature/e154a3ce-7f99-11ed-0a80-07f300016d79/documentminiature/23fc24e6-fd3f-4769-aeb3-ebf9d78d1eb6"
+            },
+            "tiny": {
+                "href": "https://tinyimage-prod.moysklad.ru/static/tinyimage/e154a3ce-7f99-11ed-0a80-07f300016d79/tinyimage/2ba01815-d4e7-40c8-b7ae-efe80c425d17/t.png",
+                "mediaType": "application/octet-stream"
+            }
+        },
+        "externalCode": "FghKPWBmh575-cpLduHPH1",
+        "stockDays": 29.85
+    },
+    {
+        "meta": {
+            "href": "https://online.moysklad.ru/api/remap/1.2/entity/product/9a396716-8f55-11ed-0a80-0ec60101a203?expand=supplier",
+            "metadataHref": "https://online.moysklad.ru/api/remap/1.2/entity/product/metadata",
+            "type": "product",
+            "mediaType": "application/json",
+            "uuidHref": "https://online.moysklad.ru/app/#good/edit?id=9a39585e-8f55-11ed-0a80-0ec60101a201"
+        },
+        "stock": 8.0,
+        "inTransit": 0.0,
+        "reserve": 0.0,
+        "quantity": 8.0,
+        "name": "StarLine Дыня",
+        "code": "00063",
+        "price": 7400.0,
+        "salePrice": 35000.0,
+        "uom": {
+            "meta": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/entity/uom/19f1edc0-fc42-4001-94cb-c9ec9c62ec10",
+                "metadataHref": "https://online.moysklad.ru/api/remap/1.2/entity/uom/metadata",
+                "type": "uom",
+                "mediaType": "application/json"
+            },
+            "name": "шт"
+        },
+        "folder": {
+            "meta": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/entity/productfolder/89993427-7f9a-11ed-0a80-011b003d809a",
+                "metadataHref": "https://online.moysklad.ru/api/remap/1.2/entity/productfolder/metadata",
+                "type": "productfolder",
+                "mediaType": "application/json",
+                "uuidHref": "https://online.moysklad.ru/app/#good/edit?id=89993427-7f9a-11ed-0a80-011b003d809a"
+            },
+            "name": "Star Line 30 g",
+            "pathName": "Табак"
+        },
+        "image": {
+            "meta": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/download/7354cad5-fbf8-460d-96d7-8c8ef7244f73",
+                "mediaType": "application/octet-stream"
+            },
+            "title": "27318.500",
+            "filename": "27318.500.jpg",
+            "size": 21279,
+            "updated": "2023-01-08 16:08:48.811",
+            "miniature": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/download/7354cad5-fbf8-460d-96d7-8c8ef7244f73?miniature=true",
+                "mediaType": "application/octet-stream",
+                "downloadHref": "https://miniature-prod.moysklad.ru/miniature/e154a3ce-7f99-11ed-0a80-07f300016d79/documentminiature/dfac5880-68f6-419b-b870-d729222e187d"
+            },
+            "tiny": {
+                "href": "https://tinyimage-prod.moysklad.ru/static/tinyimage/e154a3ce-7f99-11ed-0a80-07f300016d79/tinyimage/65788fef-3d38-4725-a84c-e94da17dd95f/t.png",
+                "mediaType": "application/octet-stream"
+            }
+        },
+        "externalCode": "zOBLXrb7jKJ93AYMtKWt50",
+        "stockDays": 22.96
+    },
+    {
+        "meta": {
+            "href": "https://online.moysklad.ru/api/remap/1.2/entity/product/3b63ee9d-7fa7-11ed-0a80-0b5a0040a34f?expand=supplier",
+            "metadataHref": "https://online.moysklad.ru/api/remap/1.2/entity/product/metadata",
+            "type": "product",
+            "mediaType": "application/json",
+            "uuidHref": "https://online.moysklad.ru/app/#good/edit?id=3b63e6b2-7fa7-11ed-0a80-0b5a0040a34d"
+        },
+        "stock": 5.0,
+        "inTransit": 0.0,
+        "reserve": 0.0,
+        "quantity": 5.0,
+        "name": "StarLine Клубничный мильфей",
+        "code": "00039",
+        "price": 7400.0,
+        "salePrice": 35000.0,
+        "uom": {
+            "meta": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/entity/uom/19f1edc0-fc42-4001-94cb-c9ec9c62ec10",
+                "metadataHref": "https://online.moysklad.ru/api/remap/1.2/entity/uom/metadata",
+                "type": "uom",
+                "mediaType": "application/json"
+            },
+            "name": "шт"
+        },
+        "folder": {
+            "meta": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/entity/productfolder/89993427-7f9a-11ed-0a80-011b003d809a",
+                "metadataHref": "https://online.moysklad.ru/api/remap/1.2/entity/productfolder/metadata",
+                "type": "productfolder",
+                "mediaType": "application/json",
+                "uuidHref": "https://online.moysklad.ru/app/#good/edit?id=89993427-7f9a-11ed-0a80-011b003d809a"
+            },
+            "name": "Star Line 30 g",
+            "pathName": "Табак"
+        },
+        "image": {
+            "meta": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/download/82087291-bdda-4cb2-b726-cefb3719d5b4",
+                "mediaType": "application/octet-stream"
+            },
+            "title": "27342.970",
+            "filename": "27342.970.jpg",
+            "size": 152246,
+            "updated": "2022-12-19 17:12:45.683",
+            "miniature": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/download/82087291-bdda-4cb2-b726-cefb3719d5b4?miniature=true",
+                "mediaType": "application/octet-stream",
+                "downloadHref": "https://miniature-prod.moysklad.ru/miniature/e154a3ce-7f99-11ed-0a80-07f300016d79/documentminiature/57f36854-e78d-4673-bbe7-c6661c1bad8a"
+            },
+            "tiny": {
+                "href": "https://tinyimage-prod.moysklad.ru/static/tinyimage/e154a3ce-7f99-11ed-0a80-07f300016d79/tinyimage/5c4c4a92-c25a-4d4b-a14a-53a891dbb3e9/t.png",
+                "mediaType": "application/octet-stream"
+            }
+        },
+        "externalCode": "BhkbPQPIhcKiQyPCp7jQ83",
+        "stockDays": 22.43
+    },
+    {
+        "meta": {
+            "href": "https://online.moysklad.ru/api/remap/1.2/entity/product/eae40973-8f54-11ed-0a80-004001178ebc?expand=supplier",
+            "metadataHref": "https://online.moysklad.ru/api/remap/1.2/entity/product/metadata",
+            "type": "product",
+            "mediaType": "application/json",
+            "uuidHref": "https://online.moysklad.ru/app/#good/edit?id=eae3fe7b-8f54-11ed-0a80-004001178eba"
+        },
+        "stock": 8.0,
+        "inTransit": 0.0,
+        "reserve": 0.0,
+        "quantity": 8.0,
+        "name": "StarLine Клюква",
+        "code": "00059",
+        "price": 7400.0,
+        "salePrice": 35000.0,
+        "uom": {
+            "meta": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/entity/uom/19f1edc0-fc42-4001-94cb-c9ec9c62ec10",
+                "metadataHref": "https://online.moysklad.ru/api/remap/1.2/entity/uom/metadata",
+                "type": "uom",
+                "mediaType": "application/json"
+            },
+            "name": "шт"
+        },
+        "folder": {
+            "meta": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/entity/productfolder/89993427-7f9a-11ed-0a80-011b003d809a",
+                "metadataHref": "https://online.moysklad.ru/api/remap/1.2/entity/productfolder/metadata",
+                "type": "productfolder",
+                "mediaType": "application/json",
+                "uuidHref": "https://online.moysklad.ru/app/#good/edit?id=89993427-7f9a-11ed-0a80-011b003d809a"
+            },
+            "name": "Star Line 30 g",
+            "pathName": "Табак"
+        },
+        "image": {
+            "meta": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/download/85f2a1aa-6f68-4c7f-80da-4c32dc6435cd",
+                "mediaType": "application/octet-stream"
+            },
+            "title": "27324.970",
+            "filename": "27324.970.jpg",
+            "size": 83628,
+            "updated": "2023-01-08 16:03:51.969",
+            "miniature": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/download/85f2a1aa-6f68-4c7f-80da-4c32dc6435cd?miniature=true",
+                "mediaType": "application/octet-stream",
+                "downloadHref": "https://miniature-prod.moysklad.ru/miniature/e154a3ce-7f99-11ed-0a80-07f300016d79/documentminiature/e433bb5b-97c8-4b36-a2cc-7a1f3fe0b209"
+            },
+            "tiny": {
+                "href": "https://tinyimage-prod.moysklad.ru/static/tinyimage/e154a3ce-7f99-11ed-0a80-07f300016d79/tinyimage/fdfc0441-f1a8-4f7c-98d1-4628a0390fee/t.png",
+                "mediaType": "application/octet-stream"
+            }
+        },
+        "externalCode": "7CSTl9vdjRMn8MkAQ0f2F1",
+        "stockDays": 22.96
+    },
+    {
+        "meta": {
+            "href": "https://online.moysklad.ru/api/remap/1.2/entity/product/2d0cbe7b-8f54-11ed-0a80-0ec6010185be?expand=supplier",
+            "metadataHref": "https://online.moysklad.ru/api/remap/1.2/entity/product/metadata",
+            "type": "product",
+            "mediaType": "application/json",
+            "uuidHref": "https://online.moysklad.ru/app/#good/edit?id=2d0cb5b1-8f54-11ed-0a80-0ec6010185bc"
+        },
+        "stock": 7.0,
+        "inTransit": 0.0,
+        "reserve": 0.0,
+        "quantity": 7.0,
+        "name": "StarLine Лимонный Пай",
+        "code": "00056",
+        "price": 7400.0,
+        "salePrice": 35000.0,
+        "uom": {
+            "meta": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/entity/uom/19f1edc0-fc42-4001-94cb-c9ec9c62ec10",
+                "metadataHref": "https://online.moysklad.ru/api/remap/1.2/entity/uom/metadata",
+                "type": "uom",
+                "mediaType": "application/json"
+            },
+            "name": "шт"
+        },
+        "folder": {
+            "meta": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/entity/productfolder/89993427-7f9a-11ed-0a80-011b003d809a",
+                "metadataHref": "https://online.moysklad.ru/api/remap/1.2/entity/productfolder/metadata",
+                "type": "productfolder",
+                "mediaType": "application/json",
+                "uuidHref": "https://online.moysklad.ru/app/#good/edit?id=89993427-7f9a-11ed-0a80-011b003d809a"
+            },
+            "name": "Star Line 30 g",
+            "pathName": "Табак"
+        },
+        "image": {
+            "meta": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/download/ed7bb25e-971d-4672-967d-8d08c0dae63f",
+                "mediaType": "application/octet-stream"
+            },
+            "title": "import_files_a6_a6d589e4885e11eaab4c0492265d79b8_a6d589e5885e11eaab4c0492265d79b8",
+            "filename": "import_files_a6_a6d589e4885e11eaab4c0492265d79b8_a6d589e5885e11eaab4c0492265d79b8.jpg",
+            "size": 258931,
+            "updated": "2023-01-08 15:58:38.460",
+            "miniature": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/download/ed7bb25e-971d-4672-967d-8d08c0dae63f?miniature=true",
+                "mediaType": "application/octet-stream",
+                "downloadHref": "https://miniature-prod.moysklad.ru/miniature/e154a3ce-7f99-11ed-0a80-07f300016d79/documentminiature/7803b79e-e6b8-4c08-989a-14360deca126"
+            },
+            "tiny": {
+                "href": "https://tinyimage-prod.moysklad.ru/static/tinyimage/e154a3ce-7f99-11ed-0a80-07f300016d79/tinyimage/5c52e1a3-d522-4bca-af95-1cd5e70ada59/t.png",
+                "mediaType": "application/octet-stream"
+            }
+        },
+        "externalCode": "2u0OhiCPj2Qs2on-ZBBtP2",
+        "stockDays": 22.96
+    },
+    {
+        "meta": {
+            "href": "https://online.moysklad.ru/api/remap/1.2/entity/product/1a00aa83-8f55-11ed-0a80-0cd101046b50?expand=supplier",
+            "metadataHref": "https://online.moysklad.ru/api/remap/1.2/entity/product/metadata",
+            "type": "product",
+            "mediaType": "application/json",
+            "uuidHref": "https://online.moysklad.ru/app/#good/edit?id=1a009da4-8f55-11ed-0a80-0cd101046b4e"
+        },
+        "stock": 6.0,
+        "inTransit": 0.0,
+        "reserve": 0.0,
+        "quantity": 6.0,
+        "name": "StarLine Малина",
+        "code": "00060",
+        "price": 7400.0,
+        "salePrice": 35000.0,
+        "uom": {
+            "meta": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/entity/uom/19f1edc0-fc42-4001-94cb-c9ec9c62ec10",
+                "metadataHref": "https://online.moysklad.ru/api/remap/1.2/entity/uom/metadata",
+                "type": "uom",
+                "mediaType": "application/json"
+            },
+            "name": "шт"
+        },
+        "folder": {
+            "meta": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/entity/productfolder/89993427-7f9a-11ed-0a80-011b003d809a",
+                "metadataHref": "https://online.moysklad.ru/api/remap/1.2/entity/productfolder/metadata",
+                "type": "productfolder",
+                "mediaType": "application/json",
+                "uuidHref": "https://online.moysklad.ru/app/#good/edit?id=89993427-7f9a-11ed-0a80-011b003d809a"
+            },
+            "name": "Star Line 30 g",
+            "pathName": "Табак"
+        },
+        "image": {
+            "meta": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/download/b6701fd8-d3de-4bd9-b0bc-9a0ab18d23e4",
+                "mediaType": "application/octet-stream"
+            },
+            "title": "1080x1080_Малина",
+            "filename": "1080x1080_Малина.jpg",
+            "size": 151989,
+            "updated": "2023-01-08 16:05:22.167",
+            "miniature": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/download/b6701fd8-d3de-4bd9-b0bc-9a0ab18d23e4?miniature=true",
+                "mediaType": "application/octet-stream",
+                "downloadHref": "https://miniature-prod.moysklad.ru/miniature/e154a3ce-7f99-11ed-0a80-07f300016d79/documentminiature/06fec039-8f91-4d35-b278-290471c344aa"
+            },
+            "tiny": {
+                "href": "https://tinyimage-prod.moysklad.ru/static/tinyimage/e154a3ce-7f99-11ed-0a80-07f300016d79/tinyimage/b2b7f96f-d841-4e4c-b884-a72cdb8166fa/t.png",
+                "mediaType": "application/octet-stream"
+            }
+        },
+        "externalCode": "S1e0risaj8mH4txmKVIYR3",
+        "stockDays": 22.96
+    },
+    {
+        "meta": {
+            "href": "https://online.moysklad.ru/api/remap/1.2/entity/product/ec744bf5-8f55-11ed-0a80-0ffb01004a24?expand=supplier",
+            "metadataHref": "https://online.moysklad.ru/api/remap/1.2/entity/product/metadata",
+            "type": "product",
+            "mediaType": "application/json",
+            "uuidHref": "https://online.moysklad.ru/app/#good/edit?id=ec743e9c-8f55-11ed-0a80-0ffb01004a22"
+        },
+        "stock": 7.0,
+        "inTransit": 0.0,
+        "reserve": 0.0,
+        "quantity": 7.0,
+        "name": "StarLine Манго",
+        "code": "00065",
+        "price": 7400.0,
+        "salePrice": 35000.0,
+        "uom": {
+            "meta": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/entity/uom/19f1edc0-fc42-4001-94cb-c9ec9c62ec10",
+                "metadataHref": "https://online.moysklad.ru/api/remap/1.2/entity/uom/metadata",
+                "type": "uom",
+                "mediaType": "application/json"
+            },
+            "name": "шт"
+        },
+        "folder": {
+            "meta": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/entity/productfolder/89993427-7f9a-11ed-0a80-011b003d809a",
+                "metadataHref": "https://online.moysklad.ru/api/remap/1.2/entity/productfolder/metadata",
+                "type": "productfolder",
+                "mediaType": "application/json",
+                "uuidHref": "https://online.moysklad.ru/app/#good/edit?id=89993427-7f9a-11ed-0a80-011b003d809a"
+            },
+            "name": "Star Line 30 g",
+            "pathName": "Табак"
+        },
+        "image": {
+            "meta": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/download/cf0bef9d-9842-482e-87bd-dea6be1745dc",
+                "mediaType": "application/octet-stream"
+            },
+            "title": "9474cef83e6c11edb2e7f02f74cb423b_9474cf0b3e6c11edb2e7f02f74cb423b",
+            "filename": "9474cef83e6c11edb2e7f02f74cb423b_9474cf0b3e6c11edb2e7f02f74cb423b.jpg",
+            "size": 159616,
+            "updated": "2023-01-08 16:11:20.084",
+            "miniature": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/download/cf0bef9d-9842-482e-87bd-dea6be1745dc?miniature=true",
+                "mediaType": "application/octet-stream",
+                "downloadHref": "https://miniature-prod.moysklad.ru/miniature/e154a3ce-7f99-11ed-0a80-07f300016d79/documentminiature/d439bc16-b5ed-4744-b800-d4ec503b44b0"
+            },
+            "tiny": {
+                "href": "https://tinyimage-prod.moysklad.ru/static/tinyimage/e154a3ce-7f99-11ed-0a80-07f300016d79/tinyimage/57f70ad9-0fed-4598-8e39-0a29fa5316b3/t.png",
+                "mediaType": "application/octet-stream"
+            }
+        },
+        "externalCode": "D6xmuuRWjwreJ4R8VvsUv3",
+        "stockDays": 22.96
+    },
+    {
+        "meta": {
+            "href": "https://online.moysklad.ru/api/remap/1.2/entity/product/bac5a450-8f55-11ed-0a80-0ffb01004665?expand=supplier",
+            "metadataHref": "https://online.moysklad.ru/api/remap/1.2/entity/product/metadata",
+            "type": "product",
+            "mediaType": "application/json",
+            "uuidHref": "https://online.moysklad.ru/app/#good/edit?id=bac59a15-8f55-11ed-0a80-0ffb01004663"
+        },
+        "stock": 8.0,
+        "inTransit": 0.0,
+        "reserve": 0.0,
+        "quantity": 8.0,
+        "name": "StarLine Орчата",
+        "code": "00064",
+        "price": 7400.0,
+        "salePrice": 35000.0,
+        "uom": {
+            "meta": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/entity/uom/19f1edc0-fc42-4001-94cb-c9ec9c62ec10",
+                "metadataHref": "https://online.moysklad.ru/api/remap/1.2/entity/uom/metadata",
+                "type": "uom",
+                "mediaType": "application/json"
+            },
+            "name": "шт"
+        },
+        "folder": {
+            "meta": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/entity/productfolder/89993427-7f9a-11ed-0a80-011b003d809a",
+                "metadataHref": "https://online.moysklad.ru/api/remap/1.2/entity/productfolder/metadata",
+                "type": "productfolder",
+                "mediaType": "application/json",
+                "uuidHref": "https://online.moysklad.ru/app/#good/edit?id=89993427-7f9a-11ed-0a80-011b003d809a"
+            },
+            "name": "Star Line 30 g",
+            "pathName": "Табак"
+        },
+        "image": {
+            "meta": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/download/de81fdc5-d32a-48c8-a871-f2c3d7557b55",
+                "mediaType": "application/octet-stream"
+            },
+            "title": "22f8d22fc0868dc22f0221f4869a100122129994",
+            "filename": "22f8d22fc0868dc22f0221f4869a100122129994.jpeg",
+            "size": 173646,
+            "updated": "2023-01-08 16:09:57.481",
+            "miniature": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/download/de81fdc5-d32a-48c8-a871-f2c3d7557b55?miniature=true",
+                "mediaType": "application/octet-stream",
+                "downloadHref": "https://miniature-prod.moysklad.ru/miniature/e154a3ce-7f99-11ed-0a80-07f300016d79/documentminiature/54236ad8-fd45-413e-96a7-1b48c6e62a77"
+            },
+            "tiny": {
+                "href": "https://tinyimage-prod.moysklad.ru/static/tinyimage/e154a3ce-7f99-11ed-0a80-07f300016d79/tinyimage/1f3fc817-925c-4662-8bbe-966d5e80aa42/t.png",
+                "mediaType": "application/octet-stream"
+            }
+        },
+        "externalCode": "eFyMqolwgGQp8Sb5vOWCw1",
+        "stockDays": 22.96
+    },
+    {
+        "meta": {
+            "href": "https://online.moysklad.ru/api/remap/1.2/entity/product/f3f5df42-8f53-11ed-0a80-04de01104f8d?expand=supplier",
+            "metadataHref": "https://online.moysklad.ru/api/remap/1.2/entity/product/metadata",
+            "type": "product",
+            "mediaType": "application/json",
+            "uuidHref": "https://online.moysklad.ru/app/#good/edit?id=f3f5d256-8f53-11ed-0a80-04de01104f8b"
+        },
+        "stock": 7.0,
+        "inTransit": 0.0,
+        "reserve": 0.0,
+        "quantity": 7.0,
+        "name": "StarLine Свободная куба",
+        "code": "00055",
+        "price": 7400.0,
+        "salePrice": 35000.0,
+        "uom": {
+            "meta": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/entity/uom/19f1edc0-fc42-4001-94cb-c9ec9c62ec10",
+                "metadataHref": "https://online.moysklad.ru/api/remap/1.2/entity/uom/metadata",
+                "type": "uom",
+                "mediaType": "application/json"
+            },
+            "name": "шт"
+        },
+        "folder": {
+            "meta": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/entity/productfolder/89993427-7f9a-11ed-0a80-011b003d809a",
+                "metadataHref": "https://online.moysklad.ru/api/remap/1.2/entity/productfolder/metadata",
+                "type": "productfolder",
+                "mediaType": "application/json",
+                "uuidHref": "https://online.moysklad.ru/app/#good/edit?id=89993427-7f9a-11ed-0a80-011b003d809a"
+            },
+            "name": "Star Line 30 g",
+            "pathName": "Табак"
+        },
+        "image": {
+            "meta": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/download/99cf35ec-2e04-4546-908d-8fc26c510fd9",
+                "mediaType": "application/octet-stream"
+            },
+            "title": "27329.970",
+            "filename": "27329.970.jpg",
+            "size": 120813,
+            "updated": "2023-01-08 15:56:59.972",
+            "miniature": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/download/99cf35ec-2e04-4546-908d-8fc26c510fd9?miniature=true",
+                "mediaType": "application/octet-stream",
+                "downloadHref": "https://miniature-prod.moysklad.ru/miniature/e154a3ce-7f99-11ed-0a80-07f300016d79/documentminiature/8333a5f4-1f55-44fd-b2f2-afb24ce23f43"
+            },
+            "tiny": {
+                "href": "https://tinyimage-prod.moysklad.ru/static/tinyimage/e154a3ce-7f99-11ed-0a80-07f300016d79/tinyimage/172c61ec-e6af-4767-82fc-abe5b9a3a47b/t.png",
+                "mediaType": "application/octet-stream"
+            }
+        },
+        "externalCode": "fx6ku8xfjkGcBwFK7qloC3",
+        "stockDays": 22.96
+    },
+    {
+        "meta": {
+            "href": "https://online.moysklad.ru/api/remap/1.2/entity/product/b95534bc-8f54-11ed-0a80-0dbe0103b1b8?expand=supplier",
+            "metadataHref": "https://online.moysklad.ru/api/remap/1.2/entity/product/metadata",
+            "type": "product",
+            "mediaType": "application/json",
+            "uuidHref": "https://online.moysklad.ru/app/#good/edit?id=b9552d62-8f54-11ed-0a80-0dbe0103b1b6"
+        },
+        "stock": 8.0,
+        "inTransit": 0.0,
+        "reserve": 0.0,
+        "quantity": 8.0,
+        "name": "StarLine Танжериниус",
+        "code": "00058",
+        "price": 7400.0,
+        "salePrice": 35000.0,
+        "uom": {
+            "meta": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/entity/uom/19f1edc0-fc42-4001-94cb-c9ec9c62ec10",
+                "metadataHref": "https://online.moysklad.ru/api/remap/1.2/entity/uom/metadata",
+                "type": "uom",
+                "mediaType": "application/json"
+            },
+            "name": "шт"
+        },
+        "folder": {
+            "meta": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/entity/productfolder/89993427-7f9a-11ed-0a80-011b003d809a",
+                "metadataHref": "https://online.moysklad.ru/api/remap/1.2/entity/productfolder/metadata",
+                "type": "productfolder",
+                "mediaType": "application/json",
+                "uuidHref": "https://online.moysklad.ru/app/#good/edit?id=89993427-7f9a-11ed-0a80-011b003d809a"
+            },
+            "name": "Star Line 30 g",
+            "pathName": "Табак"
+        },
+        "image": {
+            "meta": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/download/b0308074-41a1-49f2-9d6d-353c3ed7b645",
+                "mediaType": "application/octet-stream"
+            },
+            "title": "Daily_Hookah-Tg-500x500",
+            "filename": "Daily_Hookah-Tg-500x500.jpeg",
+            "size": 63865,
+            "updated": "2023-01-08 16:02:30.694",
+            "miniature": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/download/b0308074-41a1-49f2-9d6d-353c3ed7b645?miniature=true",
+                "mediaType": "application/octet-stream",
+                "downloadHref": "https://miniature-prod.moysklad.ru/miniature/e154a3ce-7f99-11ed-0a80-07f300016d79/documentminiature/bc2bee18-dddb-4b21-82eb-899770ed814c"
+            },
+            "tiny": {
+                "href": "https://tinyimage-prod.moysklad.ru/static/tinyimage/e154a3ce-7f99-11ed-0a80-07f300016d79/tinyimage/1cf3f25f-fb5d-40f9-b63b-d9f6790de78f/t.png",
+                "mediaType": "application/octet-stream"
+            }
+        },
+        "externalCode": "WTBHpFDIg9Trm--1ITSvZ0",
+        "stockDays": 22.96
+    },
+    {
+        "meta": {
+            "href": "https://online.moysklad.ru/api/remap/1.2/entity/product/70cefc66-8f55-11ed-0a80-091601063f5d?expand=supplier",
+            "metadataHref": "https://online.moysklad.ru/api/remap/1.2/entity/product/metadata",
+            "type": "product",
+            "mediaType": "application/json",
+            "uuidHref": "https://online.moysklad.ru/app/#good/edit?id=70cef28c-8f55-11ed-0a80-091601063f5b"
+        },
+        "stock": 8.0,
+        "inTransit": 0.0,
+        "reserve": 0.0,
+        "quantity": 8.0,
+        "name": "StarLine Фейхоа",
+        "code": "00062",
+        "price": 7400.0,
+        "salePrice": 35000.0,
+        "uom": {
+            "meta": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/entity/uom/19f1edc0-fc42-4001-94cb-c9ec9c62ec10",
+                "metadataHref": "https://online.moysklad.ru/api/remap/1.2/entity/uom/metadata",
+                "type": "uom",
+                "mediaType": "application/json"
+            },
+            "name": "шт"
+        },
+        "folder": {
+            "meta": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/entity/productfolder/89993427-7f9a-11ed-0a80-011b003d809a",
+                "metadataHref": "https://online.moysklad.ru/api/remap/1.2/entity/productfolder/metadata",
+                "type": "productfolder",
+                "mediaType": "application/json",
+                "uuidHref": "https://online.moysklad.ru/app/#good/edit?id=89993427-7f9a-11ed-0a80-011b003d809a"
+            },
+            "name": "Star Line 30 g",
+            "pathName": "Табак"
+        },
+        "image": {
+            "meta": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/download/8506eb89-266f-41e7-80a3-46e02427105c",
+                "mediaType": "application/octet-stream"
+            },
+            "title": "fe8101539297e233193d95044aad649fc767fa62",
+            "filename": "fe8101539297e233193d95044aad649fc767fa62.jpeg",
+            "size": 443999,
+            "updated": "2023-01-08 16:07:38.555",
+            "miniature": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/download/8506eb89-266f-41e7-80a3-46e02427105c?miniature=true",
+                "mediaType": "application/octet-stream",
+                "downloadHref": "https://miniature-prod.moysklad.ru/miniature/e154a3ce-7f99-11ed-0a80-07f300016d79/documentminiature/67fb982b-4a43-452f-a07d-447a201347aa"
+            },
+            "tiny": {
+                "href": "https://tinyimage-prod.moysklad.ru/static/tinyimage/e154a3ce-7f99-11ed-0a80-07f300016d79/tinyimage/2c16205a-2a6a-4ca8-b561-cec1525f30b2/t.png",
+                "mediaType": "application/octet-stream"
+            }
+        },
+        "externalCode": "d8igCTWlj43jhbGTL14DF3",
+        "stockDays": 22.96
+    },
+    {
+        "meta": {
+            "href": "https://online.moysklad.ru/api/remap/1.2/entity/product/3a94084e-8f56-11ed-0a80-0dbe0103da46?expand=supplier",
+            "metadataHref": "https://online.moysklad.ru/api/remap/1.2/entity/product/metadata",
+            "type": "product",
+            "mediaType": "application/json",
+            "uuidHref": "https://online.moysklad.ru/app/#good/edit?id=3a9400e3-8f56-11ed-0a80-0dbe0103da44"
+        },
+        "stock": 7.0,
+        "inTransit": 0.0,
+        "reserve": 0.0,
+        "quantity": 7.0,
+        "name": "StarLine Черничный Чизкейк",
+        "code": "00066",
+        "price": 7400.0,
+        "salePrice": 35000.0,
+        "uom": {
+            "meta": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/entity/uom/19f1edc0-fc42-4001-94cb-c9ec9c62ec10",
+                "metadataHref": "https://online.moysklad.ru/api/remap/1.2/entity/uom/metadata",
+                "type": "uom",
+                "mediaType": "application/json"
+            },
+            "name": "шт"
+        },
+        "folder": {
+            "meta": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/entity/productfolder/89993427-7f9a-11ed-0a80-011b003d809a",
+                "metadataHref": "https://online.moysklad.ru/api/remap/1.2/entity/productfolder/metadata",
+                "type": "productfolder",
+                "mediaType": "application/json",
+                "uuidHref": "https://online.moysklad.ru/app/#good/edit?id=89993427-7f9a-11ed-0a80-011b003d809a"
+            },
+            "name": "Star Line 30 g",
+            "pathName": "Табак"
+        },
+        "image": {
+            "meta": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/download/4c420a69-b25f-4dbc-bf2d-6f21ada2c9e6",
+                "mediaType": "application/octet-stream"
+            },
+            "title": "27331.970",
+            "filename": "27331.970.jpg",
+            "size": 112920,
+            "updated": "2023-01-08 16:13:08.297",
+            "miniature": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/download/4c420a69-b25f-4dbc-bf2d-6f21ada2c9e6?miniature=true",
+                "mediaType": "application/octet-stream",
+                "downloadHref": "https://miniature-prod.moysklad.ru/miniature/e154a3ce-7f99-11ed-0a80-07f300016d79/documentminiature/ad0f1370-1cea-4ca0-b28f-ea9d1ace28af"
+            },
+            "tiny": {
+                "href": "https://tinyimage-prod.moysklad.ru/static/tinyimage/e154a3ce-7f99-11ed-0a80-07f300016d79/tinyimage/3105768c-c093-4ee2-9405-75512759596b/t.png",
+                "mediaType": "application/octet-stream"
+            }
+        },
+        "externalCode": "wlkkLFZ6honkcP4pvUygU1",
+        "stockDays": 22.96
+    },
+    {
+        "meta": {
+            "href": "https://online.moysklad.ru/api/remap/1.2/entity/product/6ca3bf0b-8f54-11ed-0a80-004001178697?expand=supplier",
+            "metadataHref": "https://online.moysklad.ru/api/remap/1.2/entity/product/metadata",
+            "type": "product",
+            "mediaType": "application/json",
+            "uuidHref": "https://online.moysklad.ru/app/#good/edit?id=6ca3b0e5-8f54-11ed-0a80-004001178695"
+        },
+        "stock": 4.0,
+        "inTransit": 0.0,
+        "reserve": 0.0,
+        "quantity": 4.0,
+        "name": "StarLine Экзотические Фрукты",
+        "code": "00057",
+        "price": 7400.0,
+        "salePrice": 35000.0,
+        "uom": {
+            "meta": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/entity/uom/19f1edc0-fc42-4001-94cb-c9ec9c62ec10",
+                "metadataHref": "https://online.moysklad.ru/api/remap/1.2/entity/uom/metadata",
+                "type": "uom",
+                "mediaType": "application/json"
+            },
+            "name": "шт"
+        },
+        "folder": {
+            "meta": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/entity/productfolder/89993427-7f9a-11ed-0a80-011b003d809a",
+                "metadataHref": "https://online.moysklad.ru/api/remap/1.2/entity/productfolder/metadata",
+                "type": "productfolder",
+                "mediaType": "application/json",
+                "uuidHref": "https://online.moysklad.ru/app/#good/edit?id=89993427-7f9a-11ed-0a80-011b003d809a"
+            },
+            "name": "Star Line 30 g",
+            "pathName": "Табак"
+        },
+        "image": {
+            "meta": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/download/cd251c6a-0d7c-4ba2-8c83-c18bc69f0c33",
+                "mediaType": "application/octet-stream"
+            },
+            "title": "27332.970",
+            "filename": "27332.970.jpg",
+            "size": 105078,
+            "updated": "2023-01-08 16:00:20.021",
+            "miniature": {
+                "href": "https://online.moysklad.ru/api/remap/1.2/download/cd251c6a-0d7c-4ba2-8c83-c18bc69f0c33?miniature=true",
+                "mediaType": "application/octet-stream",
+                "downloadHref": "https://miniature-prod.moysklad.ru/miniature/e154a3ce-7f99-11ed-0a80-07f300016d79/documentminiature/2340f592-6ce3-4ea8-9a71-b4980aefe535"
+            },
+            "tiny": {
+                "href": "https://tinyimage-prod.moysklad.ru/static/tinyimage/e154a3ce-7f99-11ed-0a80-07f300016d79/tinyimage/cabbcfbc-88ce-46b9-9f19-29a14e37efa8/t.png",
+                "mediaType": "application/octet-stream"
+            }
+        },
+        "externalCode": "T4ehGgibiY-5cykoL0rYf1",
+        "stockDays": 22.96
+    }
+];
     filteredItems = items.filter(item => item.incart > 0);
     let totalCost = document.getElementById("totalCost");
 
@@ -50,7 +2379,7 @@
         let cost = 0;
         for (let i = 0; i < items.length; i++) {
             let item = items[i];
-            cost += item.incart * item.price;
+            cost += item.incart * item.salePrice *0.01;
         }
         totalCost.innerHTML = `Total Cost: ${cost}`;
         if (cost > 0) {
@@ -71,10 +2400,11 @@
     for (let i = 0; i < items.length; i++) {
         let item = items[i];
         let listItem = document.createElement("tr");
+        item.incart = 0;
         listItem.innerHTML = `
                                 <td>${item.name}</td>
                                 <td>${item.quantity}</td>
-                                <td>${item.price}</td>
+                                <td>${item.salePrice*0.01}</td>
                                 <td>
                                 <div class="number-input">
                                   <button onclick="this.parentNode.querySelector('input[type=number]').stepDown(); this.parentNode.querySelector('input[type=number]').dispatchEvent(new Event('change'))" ></button>

@@ -6,6 +6,9 @@ var(--tg-theme-link-color)
 var(--tg-theme-button-color)
 var(--tg-theme-button-text-color)
 */
+* {
+    box-sizing: border-box;
+}
 
 body {
     margin: 0;
@@ -130,4 +133,17 @@ tr td:nth-child(2),
 tr td:nth-child(3) {
     text-align: right;
     padding: 0 .5rem;
+}
+
+fieldset {
+    border: 0;
+    padding: 0;
+    margin: 1rem 0;
+}
+
+fieldset label,
+fieldset input,
+fieldset select {
+    display: block;
+    width: 100%;
 }
