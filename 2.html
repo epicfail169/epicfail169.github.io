@@ -27,16 +27,20 @@
 <p id="totalCost">Total Cost: 0</p>
 <script>
     let tg = window.Telegram.WebApp;
-
+    let filteredItems = []
     tg.expand();
+    tg.MainButton.textColor = "#FFFFFF";
+    tg.MainButton.color = "#2cab37";
+    tg.MainButton.setText("Оформить заказ");
+
 
     let items = [
         {name: "StarLine Экзотические Фрукты", quantity: 3, price: 350, incart: 0},
         {name: "StarLine Черничный Чизкейк", quantity: 12, price: 350, incart: 0},
         {name: "StarLine Экзотические Фрукты", quantity: 3, price: 350, incart: 0},
-        {name: "StarLine Черничный Чизкейк", quantity: 12, price: 350, incart: 0},
+        {name: "StarLine Черничный Чизкейк", quantity: 12, price: 350, incart: 1},
         {name: "StarLine Экзотические Фрукты", quantity: 3, price: 350, incart: 0},
-        {name: "StarLine Черничный Чизкейк", quantity: 12, price: 350, incart: 0},
+        {name: "StarLine Черничный Чизкейк", quantity: 12, price: 350, incart: 2},
     ];
 
     let totalCost = document.getElementById("totalCost");
@@ -52,17 +56,17 @@
 
     function updateIncart(index, value) {
         items[index].incart = Number(value);
-        console.log(items)
+        filteredItems = items.filter(item => item.incart > 0);
+        console.log(filteredItems)
         calculateTotalCost();
     }
 
-    window.onload = function () {
-        let itemList = document.getElementById("itemList");
+    let itemList = document.getElementById("itemList");
 
-        for (let i = 0; i < items.length; i++) {
-            let item = items[i];
-            let listItem = document.createElement("tr");
-            listItem.innerHTML = `
+    for (let i = 0; i < items.length; i++) {
+        let item = items[i];
+        let listItem = document.createElement("tr");
+        listItem.innerHTML = `
                                 <td>${item.name}</td>
                                 <td>${item.quantity}</td>
                                 <td>${item.price}</td>
@@ -74,9 +78,12 @@
                                 </div>
                                 </td>
                               `;
-            itemList.appendChild(listItem);
-        }
-    };
+        itemList.appendChild(listItem);
+    }
+
+    Telegram.WebApp.onEvent("mainButtonClicked", function () {
+        tg.sendData(filteredItems);
+    });
 </script>
 </body>
 </html>
