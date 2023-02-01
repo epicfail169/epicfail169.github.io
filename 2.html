@@ -9,7 +9,20 @@
 
 <body>
 
-<div id="itemList"></div>
+
+<table>
+    <thead>
+    <tr>
+        <td>Наименование</td>
+        <td>шт.</td>
+        <td>THB</td>
+        <td>Заказать</td>
+    </tr>
+    </thead>
+    <tbody id="itemList">
+    </tbody>
+</table>
+
 <p id="totalCost">Total Cost: 0</p>
 <script>
     let items = [
@@ -43,14 +56,18 @@
 
         for (let i = 0; i < items.length; i++) {
             let item = items[i];
-            let listItem = document.createElement("div");
+            let listItem = document.createElement("tr");
             listItem.innerHTML = `
-                                ${item.name} ${item.quantity}шт ${item.price}THB
+                                <td>${item.name}</td>
+                                <td>${item.quantity}</td>
+                                <td>${item.price}</td>
+                                <td>
                                 <div class="number-input">
                                   <button onclick="this.parentNode.querySelector('input[type=number]').stepDown(); this.parentNode.querySelector('input[type=number]').dispatchEvent(new Event('change'))" ></button>
                                   <input class="quantity" name="quantity" type="number" min="0" max="${item.quantity}" value="${item.incart}" onchange="updateIncart(${i}, this.value)">
                                   <button onclick="this.parentNode.querySelector('input[type=number]').stepUp(); this.parentNode.querySelector('input[type=number]').dispatchEvent(new Event('change'))" class="plus"></button>
                                 </div>
+                                </td>
                               `;
             itemList.appendChild(listItem);
         }
