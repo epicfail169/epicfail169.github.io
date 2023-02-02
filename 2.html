@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>123</title>
-    <link rel="stylesheet" href="s.css?77788">
+    <link rel="stylesheet" href="s.css?7778899">
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
 </head>
 
@@ -42,7 +42,7 @@
             <option>RUB перевод на карту</option>
         </select>
     </fieldset>
-    <div class="total" id="totalCost">Total Cost: 0</div>
+    <div class="total">Сумма: <span id="totalCost">0</span>THB / <span id="totalCostUSDT">0</span>USDT / <span id="totalCostRUB">0</span>RUB</div>
 </div>
 
 
@@ -50,6 +50,8 @@
     let tg = window.Telegram.WebApp;
     let deliverySelect = document.getElementById("delivery");
     let totalCost = document.getElementById("totalCost");
+    let totalCostUSDT = document.getElementById("totalCostUSDT");
+    let totalCostRUB = document.getElementById("totalCostRUB");
     let itemList = document.getElementById("itemList");
     let itemGroups = document.getElementById("itemGroups");
     let filteredItems = []
@@ -2862,7 +2864,9 @@
             cost += item.incart * item.salePrice * 0.01;
         }
         cost += Number(deliverySelect.value);
-        totalCost.innerHTML = `Total Cost: ${cost}`;
+        totalCost.innerText = `${cost}`;
+        totalCostUSDT.innerText = `${Math.round(cost*0.03)}`;
+        totalCostRUB.innerText = `${Math.round(cost*2.2)}`;
         if (cost > 0) {
             tg.MainButton.show();
         } else {
