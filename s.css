@@ -147,3 +147,11 @@ fieldset select {
     padding: .5rem;
     max-width: 32rem;
 }
+
+.total {
+    font-size: 1.5rem;
+    font-weight: bold;
+    background-color: var(--tg-theme-bg-color);
+    position: sticky;
+    bottom: 0;
+}
