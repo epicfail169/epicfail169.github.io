@@ -2947,8 +2947,7 @@
         for (let i = 0; i < filteredItems.length; i++) {
             finaldata[filteredItems[i].code] = filteredItems[i].incart
         }
-        console.log(finaldata);
-        tg.sendData(finaldata);
+        tg.sendData(JSON.stringify(finaldata));
     });
     calculateTotalCost();
 </script>
