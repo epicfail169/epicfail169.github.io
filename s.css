@@ -6,6 +6,10 @@ var(--tg-theme-link-color)
 var(--tg-theme-button-color)
 var(--tg-theme-button-text-color)
 */
+
+:root {
+    --padding: .75rem;
+}
 * {
     box-sizing: border-box;
 }
@@ -98,7 +102,12 @@ thead {
     background-color: var(--tg-theme-bg-color);
     z-index: 5;
 }
-
+thead td {
+    padding: var(--padding) 0;
+}
+thead td:last-child {
+    padding-right: var(--padding);
+}
 th {
     text-align: left;
     padding: 1rem 0;
@@ -114,7 +123,7 @@ tbody tr:nth-child(even) {
 }
 tr td:nth-child(1),
 tr th:nth-child(1){
-    padding-left: .5rem;
+    padding-left: var(--padding);
 }
 tr td:nth-child(2),
 tr td:nth-child(3) {
@@ -148,7 +157,7 @@ fieldset select {
 }
 
 .container {
-    padding: .5rem;
+    padding: var(--padding);
     max-width: 32rem;
 }
 
