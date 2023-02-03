@@ -148,6 +148,7 @@ fieldset select {
 }
 
 .container {
+    padding: .5rem;
     max-width: 32rem;
 }
 

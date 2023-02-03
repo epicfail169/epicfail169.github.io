@@ -9,17 +9,18 @@
 </head>
 
 <body>
+
+<table id="itemGroups">
+    <thead>
+    <tr>
+        <td>Наименование</td>
+        <td>шт.</td>
+        <td>THB</td>
+        <td>Заказать</td>
+    </tr>
+    </thead>
+</table>
 <div class="container">
-    <table id="itemGroups">
-        <thead>
-        <tr>
-            <td>Наименование</td>
-            <td>шт.</td>
-            <td>THB</td>
-            <td>Заказать</td>
-        </tr>
-        </thead>
-    </table>
     <fieldset>
         <label>Тайский номер телефона</label>
         <input type="text" placeholder="+66 ...">
@@ -42,7 +43,9 @@
             <option>RUB перевод на карту</option>
         </select>
     </fieldset>
-    <div class="total">Сумма: <span id="totalCost">0</span>THB / <span id="totalCostUSDT">0</span>USDT / <span id="totalCostRUB">0</span>RUB</div>
+    <div class="total">Сумма: <span id="totalCost">0</span>THB / <span id="totalCostUSDT">0</span>USDT / <span
+            id="totalCostRUB">0</span>RUB
+    </div>
 </div>
 
 
@@ -2865,8 +2868,8 @@
         }
         cost += Number(deliverySelect.value);
         totalCost.innerText = `${cost}`;
-        totalCostUSDT.innerText = `${Math.round(cost*0.03)}`;
-        totalCostRUB.innerText = `${Math.round(cost*2.2)}`;
+        totalCostUSDT.innerText = `${Math.round(cost * 0.03)}`;
+        totalCostRUB.innerText = `${Math.round(cost * 2.2)}`;
         if (cost > 0) {
             tg.MainButton.show();
         } else {
