@@ -2881,12 +2881,10 @@
         items[index].incart = Number(value);
         filteredItems = items.filter(item => item.incart > 0);
         calculateTotalCost();
-        // console.log(filteredItems);
-        // console.log(items);
     }
 
 
-
+    filteredItems = items.filter(item => item.incart > 0);
 
 
     let groupMap = new Map();
@@ -2941,13 +2939,9 @@
     }
 
     Telegram.WebApp.onEvent("mainButtonClicked", function () {
-
         filteredItems = items.filter(item => item.incart > 0);
-
         tg.sendData(JSON.stringify(filteredItems));
     });
-    filteredItems = items.filter(item => item.incart > 0);
-
     calculateTotalCost();
 </script>
 </body>
