@@ -9,47 +9,52 @@
 </head>
 
 <body>
-
-<table id="itemGroups">
-    <thead>
-    <tr>
-        <td>Наименование</td>
-        <td>шт.</td>
-        <td>THB</td>
-        <td>Заказать</td>
-    </tr>
-    </thead>
-</table>
-<div class="container">
-    <fieldset>
-        <label>Тайский номер телефона</label>
-        <input type="text" placeholder="+66 ...">
-    </fieldset>
-    <fieldset>
-        <label>Доставка</label>
-        <select id="delivery" onchange="calculateTotalCost()">
-            <option disabled selected value="0">Выберите район доставки</option>
-        </select>
-    </fieldset>
-    <fieldset>
-        <label>Укажите точку доставки на Google Maps</label>
-        <input type="text" placeholder="https://goo.gl/maps/...">
-    </fieldset>
-    <fieldset>
-        <label>Способ оплаты</label>
-        <select>
-            <option>THB перевод на bank account</option>
-            <option>USDT на крипто-кошелёк</option>
-            <option>RUB перевод на карту</option>
-        </select>
-    </fieldset>
-    <div class="total">Сумма: <span id="totalCost">0</span>THB / <span id="totalCostUSDT">0</span>USDT / <span
-            id="totalCostRUB">0</span>RUB
+<form>
+    <table id="itemGroups">
+        <thead>
+        <tr>
+            <td>Наименование</td>
+            <td>шт.</td>
+            <td>THB</td>
+            <td>Заказать</td>
+        </tr>
+        </thead>
+    </table>
+    <div class="container">
+        <fieldset>
+            <label>Тайский номер телефона</label>
+            <input type="text" placeholder="+66 ..." id="phone">
+        </fieldset>
+        <fieldset>
+            <label>Доставка</label>
+            <select id="delivery" onchange="calculateTotalCost()">
+                <option disabled selected value="0">Выберите район доставки</option>
+            </select>
+        </fieldset>
+        <fieldset>
+            <label>Укажите точку доставки на Google Maps</label>
+            <input type="text" placeholder="https://goo.gl/maps/..." id="gmap">
+        </fieldset>
+        <fieldset>
+            <label>Способ оплаты</label>
+            <select id="payment">
+                <option>THB перевод на bank account</option>
+                <option>USDT на крипто-кошелёк</option>
+                <option>RUB перевод на карту</option>
+            </select>
+        </fieldset>
+        <div class="total">Сумма: <span id="totalCost">0</span>THB / <span id="totalCostUSDT">0</span>USDT / <span
+                id="totalCostRUB">0</span>RUB
+        </div>
     </div>
-</div>
-
+</form>
 
 <script>
+    const phone = document.querySelector('#phone'),
+        tambon = document.querySelector('#delivery'),
+        gmap = document.querySelector('#gmap'),
+        payment = document.querySelector('#payment');
+    const form = document.querySelector('form');
     let tg = window.Telegram.WebApp;
     let deliverySelect = document.getElementById("delivery");
     let totalCost = document.getElementById("totalCost");
@@ -2941,6 +2946,14 @@
         listItem.innerText = `${item.name} - ${itemPrice}THB`;
         deliverySelect.appendChild(listItem);
     }
+
+    form.addEventListener('change', () => {
+        console.log(phone.value, gmap.value, tambon.value, payment.value)
+        finaldata['телефон'] = phone.value;
+        finaldata['район'] = tambon.value;
+        finaldata['gmap'] = gmap.value;
+        finaldata['оплата'] = payment.value;
+    });
 
     Telegram.WebApp.onEvent("mainButtonClicked", function () {
         filteredItems = items.filter(item => item.incart > 0);
