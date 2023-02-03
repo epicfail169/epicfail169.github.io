@@ -2881,6 +2881,7 @@
         items[index].incart = Number(value);
         filteredItems = items.filter(item => item.incart > 0);
         calculateTotalCost();
+        console.log(filteredItems);
     }
 
 
@@ -2890,6 +2891,7 @@
     let groupMap = new Map();
     for (let i = 0; i < items.length; i++) {
         let item = items[i];
+        item.index = i;
         let price = item.folder.name;
 
         if (!groupMap.has(price)) {
@@ -2918,7 +2920,7 @@
                                 <td>
                                 <div class="number-input">
                                   <button onclick="this.parentNode.querySelector('input[type=number]').stepDown(); this.parentNode.querySelector('input[type=number]').dispatchEvent(new Event('change'))" ></button>
-                                  <input class="quantity" name="quantity" type="number" min="0" max="${item.quantity}" value="${item.incart}" onchange="updateIncart(${j}, this.value)">
+                                  <input class="quantity" name="quantity" type="number" min="0" max="${item.quantity}" value="${item.incart}" onchange="updateIncart(${item.index}, this.value)">
                                   <button onclick="this.parentNode.querySelector('input[type=number]').stepUp(); this.parentNode.querySelector('input[type=number]').dispatchEvent(new Event('change'))" class="plus"></button>
                                 </div>
                                 </td>
