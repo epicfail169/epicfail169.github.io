@@ -2881,10 +2881,12 @@
         items[index].incart = Number(value);
         filteredItems = items.filter(item => item.incart > 0);
         calculateTotalCost();
+        // console.log(filteredItems);
+        // console.log(items);
     }
 
 
-    filteredItems = items.filter(item => item.incart > 0);
+
 
 
     let groupMap = new Map();
@@ -2918,7 +2920,7 @@
                                 <td>
                                 <div class="number-input">
                                   <button onclick="this.parentNode.querySelector('input[type=number]').stepDown(); this.parentNode.querySelector('input[type=number]').dispatchEvent(new Event('change'))" ></button>
-                                  <input class="quantity" name="quantity" type="number" min="0" max="${item.quantity}" value="${item.incart}" onchange="updateIncart(${i}, this.value)">
+                                  <input class="quantity" name="quantity" type="number" min="0" max="${item.quantity}" value="${item.incart}" onchange="updateIncart(${j}, this.value)">
                                   <button onclick="this.parentNode.querySelector('input[type=number]').stepUp(); this.parentNode.querySelector('input[type=number]').dispatchEvent(new Event('change'))" class="plus"></button>
                                 </div>
                                 </td>
@@ -2939,9 +2941,13 @@
     }
 
     Telegram.WebApp.onEvent("mainButtonClicked", function () {
+
         filteredItems = items.filter(item => item.incart > 0);
+
         tg.sendData(JSON.stringify(filteredItems));
     });
+    filteredItems = items.filter(item => item.incart > 0);
+
     calculateTotalCost();
 </script>
 </body>
