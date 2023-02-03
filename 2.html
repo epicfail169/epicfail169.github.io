@@ -2879,13 +2879,8 @@
 
     function updateIncart(index, value) {
         items[index].incart = Number(value);
-        filteredItems = items.filter(item => item.incart > 0);
-
         calculateTotalCost();
     }
-
-
-    filteredItems = items.filter(item => item.incart > 0);
 
 
     let groupMap = new Map();
@@ -2942,7 +2937,11 @@
 
     Telegram.WebApp.onEvent("mainButtonClicked", function () {
         filteredItems = items.filter(item => item.incart > 0);
-        tg.sendData(filteredItems);
+        let finaldata = new Map();
+        for (let i = 0; i < filteredItems.length; i++) {
+            finaldata.set(filteredItems[i].code, filteredItems[i].incart)
+        }
+        tg.sendData(finaldata);
     });
     calculateTotalCost();
 </script>
