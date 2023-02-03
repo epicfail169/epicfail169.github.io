@@ -55,9 +55,10 @@
     let totalCost = document.getElementById("totalCost");
     let totalCostUSDT = document.getElementById("totalCostUSDT");
     let totalCostRUB = document.getElementById("totalCostRUB");
-    let itemList = document.getElementById("itemList");
     let itemGroups = document.getElementById("itemGroups");
     let filteredItems = []
+    let finaldata = new Map();
+
     tg.expand();
     tg.MainButton.textColor = "#FFFFFF";
     tg.MainButton.color = "#2cab37";
@@ -2880,6 +2881,12 @@
     function updateIncart(index, value) {
         items[index].incart = Number(value);
         calculateTotalCost();
+        filteredItems = items.filter(item => item.incart > 0);
+
+        for (let i = 0; i < filteredItems.length; i++) {
+            finaldata.set(filteredItems[i].code, filteredItems[i].incart)
+        }
+        console.log(finaldata);
     }
 
 
@@ -2937,11 +2944,10 @@
 
     Telegram.WebApp.onEvent("mainButtonClicked", function () {
         filteredItems = items.filter(item => item.incart > 0);
-        let finaldata = new Map();
         for (let i = 0; i < filteredItems.length; i++) {
             finaldata.set(filteredItems[i].code, filteredItems[i].incart)
         }
-        tg.sendData('finaldata');
+        tg.sendData(finaldata);
     });
     calculateTotalCost();
 </script>
