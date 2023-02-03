@@ -102,7 +102,7 @@ thead {
 th {
     text-align: left;
     padding: 1rem 0;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
 }
 
 td {
@@ -112,7 +112,10 @@ td {
 tbody tr:nth-child(even) {
     background-color: hsla(0, 0%, 50%, 0.1);
 }
-
+tr td:nth-child(1),
+tr th:nth-child(1){
+    padding-left: .5rem;
+}
 tr td:nth-child(2),
 tr td:nth-child(3) {
     text-align: right;
@@ -132,6 +135,7 @@ fieldset {
 fieldset label {
     display: block;
     width: 100%;
+    margin-bottom: .5rem;
 }
 
 fieldset input,
@@ -144,7 +148,6 @@ fieldset select {
 }
 
 .container {
-    padding: .5rem;
     max-width: 32rem;
 }
 
