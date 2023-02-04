@@ -2952,11 +2952,13 @@
         console.log(phone.value, gmap.value, tambon.value, payment.value)
         finaldata['телефон'] = phone.value;
         finaldata['район'] = tambon.value;
-        finaldata['gmap'] = gmap.value;
         finaldata['оплата'] = payment.value;
     });
 
     Telegram.WebApp.onEvent("mainButtonClicked", function () {
+        finaldata['телефон'] = phone.value;
+        finaldata['район'] = tambon.value;
+        finaldata['оплата'] = payment.value;
         filteredItems = items.filter(item => item.incart > 0);
         for (let i = 0; i < filteredItems.length; i++) {
             finaldata[filteredItems[i].code] = filteredItems[i].incart

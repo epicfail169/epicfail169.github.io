@@ -155,7 +155,9 @@ fieldset select {
     padding: 0 .75rem;
     font-size: 1.25rem;
 }
-
+fieldset select option {
+    font-size: 1rem;
+}
 .container {
     padding: var(--padding);
     max-width: 32rem;
