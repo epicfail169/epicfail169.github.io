@@ -62,6 +62,7 @@
     let totalCostUSDT = document.getElementById("totalCostUSDT");
     let totalCostRUB = document.getElementById("totalCostRUB");
     let itemGroups = document.getElementById("itemGroups");
+    let items;
     let filteredItems = [];
     let finaldata = {};
 
@@ -70,39 +71,33 @@
     tg.MainButton.color = "#2cab37";
     tg.MainButton.setText("Оформить заказ");
 
-    let items;
+    function processItems(items) {
+        let groupMap = new Map();
+        for (let i = 0; i < items.length; i++) {
+            let item = items[i];
+            item.index = i;
+            let price = item.folder.name;
 
-    fetch('http://127.0.0.2:8000/products/')
-        .then(response => response.json())
-        .then(data => {
-            items = data;
-            console.log("items fetched");
-            let groupMap = new Map();
-            for (let i = 0; i < items.length; i++) {
-                let item = items[i];
-                item.index = i;
-                let price = item.folder.name;
-
-                if (!groupMap.has(price)) {
-                    groupMap.set(price, []);
-                }
-
-                groupMap.get(price).push(item);
+            if (!groupMap.has(price)) {
+                groupMap.set(price, []);
             }
 
-            let groups = Array.from(groupMap.values());
+            groupMap.get(price).push(item);
+        }
 
-            for (let i = 0; i < groups.length; i++) {
-                let group = groups[i];
-                itemGroups.innerHTML += `<tbody id="group-${i}"><tr style="background-color: transparent"><th>${group[0].folder.name}</th></tr></tbody>`;
+        let groups = Array.from(groupMap.values());
 
-                let groupList = document.getElementById(`group-${i}`);
-                for (let j = 0; j < group.length; j++) {
-                    let item = group[j];
-                    let tempname = group[j].folder.name.replace(' 30g', '');
-                    let listItem = document.createElement("tr");
-                    item.incart = 0;
-                    listItem.innerHTML = `
+        for (let i = 0; i < groups.length; i++) {
+            let group = groups[i];
+            itemGroups.innerHTML += `<tbody id="group-${i}"><tr style="background-color: transparent"><th>${group[0].folder.name}</th></tr></tbody>`;
+
+            let groupList = document.getElementById(`group-${i}`);
+            for (let j = 0; j < group.length; j++) {
+                let item = group[j];
+                let tempname = group[j].folder.name.replace(' 30g', '');
+                let listItem = document.createElement("tr");
+                item.incart = 0;
+                listItem.innerHTML = `
                                 <td>${item.name.replace(tempname, '')}</td>
                                 <td>${item.quantity}</td>
                                 <td>${item.salePrice * 0.01}</td>
@@ -114,9 +109,35 @@
                                 </div>
                                 </td>
                               `;
-                    groupList.appendChild(listItem);
-                }
+                groupList.appendChild(listItem);
             }
+        }
+    }
+
+    function calculateTotalCost() {
+        let cost = 0;
+        for (let i = 0; i < items.length; i++) {
+            let item = items[i];
+            cost += item.incart * item.salePrice * 0.01;
+        }
+        cost += Number(deliverySelect.value);
+        totalCost.innerText = `${cost}`;
+        totalCostUSDT.innerText = `${Math.round(cost * 0.03)}`;
+        totalCostRUB.innerText = `${Math.round(cost * 2.2)}`;
+        if (cost > 0) {
+            tg.MainButton.show();
+        } else {
+            tg.MainButton.hide();
+        }
+    }
+
+    fetch('http://127.0.0.2:8000/products/')
+        .then(response => response.json())
+        .then(data => {
+            items = data;
+            console.log('items fetched');
+            processItems(items)
+            calculateTotalCost();
         })
         .catch(error => console.error(error));
     let delivery = [
@@ -594,22 +615,6 @@
         }
     ]
 
-    function calculateTotalCost() {
-        let cost = 0;
-        for (let i = 0; i < items.length; i++) {
-            let item = items[i];
-            cost += item.incart * item.salePrice * 0.01;
-        }
-        cost += Number(deliverySelect.value);
-        totalCost.innerText = `${cost}`;
-        totalCostUSDT.innerText = `${Math.round(cost * 0.03)}`;
-        totalCostRUB.innerText = `${Math.round(cost * 2.2)}`;
-        if (cost > 0) {
-            tg.MainButton.show();
-        } else {
-            tg.MainButton.hide();
-        }
-    }
 
     function updateIncart(index, value) {
         items[index].incart = Number(value);
@@ -650,7 +655,7 @@
         }
         tg.sendData(JSON.stringify(finaldata));
     });
-    calculateTotalCost();
+
 </script>
 </body>
 </html>
