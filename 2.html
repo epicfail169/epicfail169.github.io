@@ -73,12 +73,52 @@
     let items;
 
     fetch('http://127.0.0.2:8000/products/')
-      .then(response => response.json())
-      .then(data => {
-        items = data;
-        console.log(items); // or do something else with the items list here
-      })
-      .catch(error => console.error(error));
+        .then(response => response.json())
+        .then(data => {
+            items = data;
+            console.log("items fetched");
+            let groupMap = new Map();
+            for (let i = 0; i < items.length; i++) {
+                let item = items[i];
+                item.index = i;
+                let price = item.folder.name;
+
+                if (!groupMap.has(price)) {
+                    groupMap.set(price, []);
+                }
+
+                groupMap.get(price).push(item);
+            }
+
+            let groups = Array.from(groupMap.values());
+
+            for (let i = 0; i < groups.length; i++) {
+                let group = groups[i];
+                itemGroups.innerHTML += `<tbody id="group-${i}"><tr style="background-color: transparent"><th>${group[0].folder.name}</th></tr></tbody>`;
+
+                let groupList = document.getElementById(`group-${i}`);
+                for (let j = 0; j < group.length; j++) {
+                    let item = group[j];
+                    let tempname = group[j].folder.name.replace(' 30g', '');
+                    let listItem = document.createElement("tr");
+                    item.incart = 0;
+                    listItem.innerHTML = `
+                                <td>${item.name.replace(tempname, '')}</td>
+                                <td>${item.quantity}</td>
+                                <td>${item.salePrice * 0.01}</td>
+                                <td>
+                                <div class="number-input">
+                                  <button onclick="this.parentNode.querySelector('input[type=number]').stepDown(); this.parentNode.querySelector('input[type=number]').dispatchEvent(new Event('change'))" ></button>
+                                  <input class="quantity" name="quantity" type="number" min="0" max="${item.quantity}" value="${item.incart}" onchange="updateIncart(${item.index}, this.value)">
+                                  <button onclick="this.parentNode.querySelector('input[type=number]').stepUp(); this.parentNode.querySelector('input[type=number]').dispatchEvent(new Event('change'))" class="plus"></button>
+                                </div>
+                                </td>
+                              `;
+                    groupList.appendChild(listItem);
+                }
+            }
+        })
+        .catch(error => console.error(error));
     let delivery = [
         {
             "meta": {
@@ -580,48 +620,6 @@
             finaldata[filteredItems[i].code] = filteredItems[i].incart
         }
         console.log(finaldata);
-    }
-
-
-    let groupMap = new Map();
-    for (let i = 0; i < items.length; i++) {
-        let item = items[i];
-        item.index = i;
-        let price = item.folder.name;
-
-        if (!groupMap.has(price)) {
-            groupMap.set(price, []);
-        }
-
-        groupMap.get(price).push(item);
-    }
-
-    let groups = Array.from(groupMap.values());
-
-    for (let i = 0; i < groups.length; i++) {
-        let group = groups[i];
-        itemGroups.innerHTML += `<tbody id="group-${i}"><tr style="background-color: transparent"><th>${group[0].folder.name}</th></tr></tbody>`;
-
-        let groupList = document.getElementById(`group-${i}`);
-        for (let j = 0; j < group.length; j++) {
-            let item = group[j];
-            let tempname = group[j].folder.name.replace(' 30g', '');
-            let listItem = document.createElement("tr");
-            item.incart = 0;
-            listItem.innerHTML = `
-                                <td>${item.name.replace(tempname, '')}</td>
-                                <td>${item.quantity}</td>
-                                <td>${item.salePrice * 0.01}</td>
-                                <td>
-                                <div class="number-input">
-                                  <button onclick="this.parentNode.querySelector('input[type=number]').stepDown(); this.parentNode.querySelector('input[type=number]').dispatchEvent(new Event('change'))" ></button>
-                                  <input class="quantity" name="quantity" type="number" min="0" max="${item.quantity}" value="${item.incart}" onchange="updateIncart(${item.index}, this.value)">
-                                  <button onclick="this.parentNode.querySelector('input[type=number]').stepUp(); this.parentNode.querySelector('input[type=number]').dispatchEvent(new Event('change'))" class="plus"></button>
-                                </div>
-                                </td>
-                              `;
-            groupList.appendChild(listItem);
-        }
     }
 
 
