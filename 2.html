@@ -66,6 +66,7 @@
     let items;
     let filteredItems = [];
     let finaldata = {};
+    let products = {};
     let err = document.getElementById(`err`);
     tg.expand();
     tg.MainButton.textColor = "#FFFFFF";
@@ -130,6 +131,7 @@
         } else {
             tg.MainButton.hide();
         }
+        finaldata['итого'] = cost
     }
 
     fetch('http://127.0.0.2:8000/products/')
@@ -619,16 +621,21 @@
         }
     ]
 
+    function filterItems() {
+        filteredItems = items.filter(item => item.incart > 0);
+        console.log(filteredItems);
+        for (let i = 0; i < filteredItems.length; i++) {
+            products[filteredItems[i].code] = filteredItems[i].incart
+        }
+        finaldata['products'] = products
+        console.log(finaldata);
+    }
 
     function updateIncart(index, value) {
         items[index].incart = Number(value);
         calculateTotalCost();
-        filteredItems = items.filter(item => item.incart > 0);
+        filterItems();
 
-        for (let i = 0; i < filteredItems.length; i++) {
-            finaldata[filteredItems[i].code] = filteredItems[i].incart
-        }
-        console.log(finaldata);
     }
 
 
@@ -643,20 +650,17 @@
     }
 
     form.addEventListener('change', () => {
-        console.log(phone.value, gmap.value, tambon.value, payment.value)
         finaldata['телефон'] = phone.value;
-        finaldata['район'] = tambon.value;
+        finaldata['доставка'] = tambon.value;
         finaldata['оплата'] = payment.value;
+        console.log(finaldata);
     });
 
     Telegram.WebApp.onEvent("mainButtonClicked", function () {
         finaldata['телефон'] = phone.value;
-        finaldata['район'] = tambon.value;
+        finaldata['доставка'] = tambon.value;
         finaldata['оплата'] = payment.value;
-        filteredItems = items.filter(item => item.incart > 0);
-        for (let i = 0; i < filteredItems.length; i++) {
-            finaldata[filteredItems[i].code] = filteredItems[i].incart
-        }
+        filterItems();
         tg.sendData(JSON.stringify(finaldata));
     });
 
