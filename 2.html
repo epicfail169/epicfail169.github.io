@@ -34,10 +34,6 @@
             </select>
         </fieldset>
         <fieldset>
-            <label>Укажите точку доставки на Google Maps</label>
-            <input type="text" placeholder="https://goo.gl/maps/..." id="gmap">
-        </fieldset>
-        <fieldset>
             <label>Способ оплаты</label>
             <select id="payment">
                 <option>THB перевод на bank account</option>
@@ -54,7 +50,6 @@
 <script>
     const phone = document.querySelector('#phone'),
         tambon = document.querySelector('#delivery'),
-        gmap = document.querySelector('#gmap'),
         payment = document.querySelector('#payment');
     const form = document.querySelector('form');
     let tg = window.Telegram.WebApp;
