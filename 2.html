@@ -74,7 +74,13 @@
         for (let i = 0; i < items.length; i++) {
             let item = items[i];
             item.index = i;
-            let price = item.folder.name;
+            let priceж
+            if (item.folder.name) {
+                price = item.folder.name;
+            } else if (item.pathName) {
+                price = item.pathName;
+            }
+
 
             if (!groupMap.has(price)) {
                 groupMap.set(price, []);
