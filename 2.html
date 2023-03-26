@@ -116,7 +116,7 @@
         let cost = 0;
         for (let i = 0; i < items.length; i++) {
             let item = items[i];
-            cost += item.incart * item.salePrice * 0.01;
+            cost += item.incart * item.price * 0.01;
         }
         cost += Number(deliverySelect.value);
         totalCost.innerText = `${cost}`;
