@@ -135,6 +135,7 @@
         .then(data => {
             items = data;
             console.log('items fetched');
+            console.log(items);
             processItems(items)
             calculateTotalCost();
         })
