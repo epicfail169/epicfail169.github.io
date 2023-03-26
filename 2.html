@@ -98,7 +98,7 @@
                 listItem.innerHTML = `
                                 <td>${item.name.replace(tempname, '')}</td>
                                 <td>${item.quantity}</td>
-                                <td>${item.price * 0.01}</td>
+                                <td>${(item.price * 0.01).toFixed(2)}</td>
                                 <td>
                                 <div class="number-input">
                                   <button onclick="this.parentNode.querySelector('input[type=number]').stepDown(); this.parentNode.querySelector('input[type=number]').dispatchEvent(new Event('change'))" ></button>
