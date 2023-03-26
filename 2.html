@@ -147,11 +147,11 @@
     function processDelivery() {
         for (let i = 0; i < delivery.length; i++) {
             let item = delivery[i];
-            let itemPrice = item.salePrices[0].value * 0.01;
+            let itemPrice = item.price * 0.01;
             let listItem = document.createElement("option");
-            listItem.setAttribute('value', itemPrice);
+            listItem.setAttribute('value', itemPrice.toFixed(2));
             item.incart = 0;
-            listItem.innerText = `${item.name} - ${itemPrice}THB`;
+            listItem.innerText = `${item.name} - ${itemPrice.toFixed(2)}THB`;
             deliverySelect.appendChild(listItem);
         }
     }
