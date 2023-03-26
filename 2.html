@@ -87,12 +87,12 @@
 
         for (let i = 0; i < groups.length; i++) {
             let group = groups[i];
-            itemGroups.innerHTML += `<tbody id="group-${i}"><tr style="background-color: transparent"><th>${group[0].folder.name}</th></tr></tbody>`;
+            itemGroups.innerHTML += `<tbody id="group-${i}"><tr style="background-color: transparent"><th>${group[0].folder}</th></tr></tbody>`;
 
             let groupList = document.getElementById(`group-${i}`);
             for (let j = 0; j < group.length; j++) {
                 let item = group[j];
-                let tempname = group[j].folder.name.replace(' 30g', '');
+                let tempname = group[j].folder.replace(' 30g', '');
                 let listItem = document.createElement("tr");
                 item.incart = 0;
                 listItem.innerHTML = `
@@ -130,7 +130,7 @@
         finaldata['итого'] = cost
     }
 
-    fetch('http://127.0.0.2:8000/products/')
+    fetch('http://127.0.0.2:8000/p/')
         .then(response => response.json())
         .then(data => {
             items = data;
